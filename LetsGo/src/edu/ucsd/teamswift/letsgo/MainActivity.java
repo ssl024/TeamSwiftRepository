@@ -1,5 +1,3 @@
-// Kelly Push Test 2
-// Eric push test
 package edu.ucsd.teamswift.letsgo;
 
 import android.app.Activity;	

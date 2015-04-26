@@ -16,7 +16,7 @@
         android:layout_alignLeft="@+id/userPassword"
         android:layout_marginBottom="51dp"
         android:ems="10"
-        android:hint="Enter Email"
+        android:hint="@string/logInHint"
         android:inputType="textEmailAddress"
         android:text="@string/userEmail"/>
 
@@ -29,7 +29,7 @@
         android:layout_marginBottom="33dp"
         android:ems="10"
         android:text="@string/userPassword" 
-        android:hint="Enter Password"
+        android:hint="@string/passwordHint"
         android:inputType="textPassword"/>
        
     <Button
