@@ -8,67 +8,59 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="edu.ucsd.teamswift.letsgo.MainActivity" >
 
-    <TextView
-        android:id="@+id/textView1"
+    <EditText
+        android:id="@+id/userEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="45dp"
-        android:text="@string/hello_world" />
+        android:layout_alignBottom="@+id/userPassword"
+        android:layout_alignLeft="@+id/userPassword"
+        android:layout_marginBottom="51dp"
+        android:ems="10"
+        android:hint="Enter email"
+        android:inputType="textEmailAddress"
+        android:text="@string/userEmail" >
 
-    <CheckedTextView
-        android:id="@+id/checkedTextView1"
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/userPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button2"
+        android:layout_above="@+id/button2"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="14dp"
-        android:text="@string/forgotPassword" />
+        android:layout_marginBottom="33dp"
+        android:ems="10"
+        android:hint="Enter Password"
+        android:inputType="textPassword"
+        android:text="@string/userPassword" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button1"
-        android:layout_alignBottom="@+id/button1"
-        android:layout_alignRight="@+id/editText1"
-        android:layout_marginRight="30dp"
+        android:layout_above="@+id/checkedTextView1"
+        android:layout_alignRight="@+id/userEmail"
+        android:layout_marginBottom="26dp"
         android:text="@string/logInButton" />
-
-    <EditText
-        android:id="@+id/editText1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button1"
-        android:layout_below="@+id/textView1"
-        android:layout_marginTop="64dp"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:text="@string/userEmail" />
-
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText1"
-        android:layout_centerVertical="true"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:text="@string/userPassword" >
-
-        <requestFocus />
-    </EditText>
 
     <Button
         android:id="@+id/button1"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/textView1"
-        android:layout_below="@+id/editText2"
-        android:layout_marginRight="52dp"
-        android:layout_marginTop="38dp"
+        android:layout_alignBaseline="@+id/button2"
+        android:layout_alignBottom="@+id/button2"
+        android:layout_alignLeft="@+id/userPassword"
         android:text="@string/signUpButton" />
+
+    <CheckedTextView
+        android:id="@+id/checkedTextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:text="@string/forgotPassword" />
 
 </RelativeLayout>
