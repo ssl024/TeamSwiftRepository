@@ -2,10 +2,13 @@ package edu.ucsd.teamswift.letsgo;
 
 import android.app.Activity;	
 import android.os.Bundle;
+import android.util.Log;	// For logcat logging/debugging
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;	// For button OnClick event handling
 
 public class MainActivity extends Activity {
+
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -30,5 +33,10 @@ public class MainActivity extends Activity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+	
+	public void signUpClick(View view)
+	{
+		Log.v("SignUpButtonClick", "Button was clicked!");
 	}
 }
