@@ -54,7 +54,6 @@
         android:layout_alignLeft="@+id/editText1"
         android:layout_centerVertical="true"
         android:ems="10"
-        android:inputType="textPassword"
         android:text="@string/userPassword" >
 
         <requestFocus />
