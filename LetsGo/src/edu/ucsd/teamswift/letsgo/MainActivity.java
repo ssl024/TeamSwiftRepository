@@ -2,7 +2,7 @@
 //Eric push test
 package edu.ucsd.teamswift.letsgo;
 
-import android.app.Activity;
+import android.app.Activity;	
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
