@@ -16,14 +16,11 @@
         android:layout_alignLeft="@+id/userPassword"
         android:layout_marginBottom="51dp"
         android:ems="10"
-        android:hint="Enter email"
+        android:hint="Enter Email"
         android:inputType="textEmailAddress"
-        android:text="@string/userEmail" >
+        android:text="@string/userEmail"/>
 
-        <requestFocus />
-    </EditText>
-
-    <EditText
+	<EditText
         android:id="@+id/userPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -31,14 +28,10 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="33dp"
         android:ems="10"
-<<<<<<< HEAD
-        android:text="@string/userPassword" >
-=======
+        android:text="@string/userPassword" 
         android:hint="Enter Password"
-        android:inputType="textPassword"
-        android:text="@string/userPassword" />
->>>>>>> origin/master
-
+        android:inputType="textPassword"/>
+       
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
