@@ -8,56 +8,58 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="edu.ucsd.teamswift.letsgo.MainActivity" >
 
+
     <EditText
         android:id="@+id/userEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/userPassword"
-        android:layout_alignLeft="@+id/userPassword"
-        android:layout_marginBottom="51dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="63dp"
+        android:layout_marginTop="110dp"
         android:ems="10"
         android:hint="@string/logInHint"
         android:inputType="textEmailAddress"
-        android:text="@string/userEmail"/>
+        android:text="@string/userEmail" />
 
-	<EditText
+    <EditText
         android:id="@+id/userPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/button2"
+        android:layout_below="@+id/userEmail"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="33dp"
+        android:layout_marginTop="56dp"
         android:ems="10"
-        android:text="@string/userPassword" 
         android:hint="@string/passwordHint"
-        android:inputType="textPassword"/>
-       
+        android:inputType="textPassword"
+        android:text="@string/userPassword" />
+ 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/LogInButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/checkedTextView1"
-        android:layout_alignRight="@+id/userEmail"
-        android:layout_marginBottom="26dp"
+        android:layout_alignLeft="@+id/userPassword"
+        android:layout_below="@+id/userEmail"
+        android:layout_marginTop="117dp"
         android:text="@string/logInButton" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/signUpButton"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button2"
-        android:layout_alignBottom="@+id/button2"
-        android:layout_alignLeft="@+id/userPassword"
+        android:layout_alignBaseline="@+id/LogInButton"
+        android:layout_alignBottom="@+id/LogInButton"
+        android:layout_alignRight="@+id/userPassword"
         android:text="@string/signUpButton" />
-
+    
     <CheckedTextView
         android:id="@+id/checkedTextView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/signUpButton"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="50dp"
+        android:layout_marginTop="13dp"
         android:text="@string/forgotPassword" />
-
+    
 </RelativeLayout>
