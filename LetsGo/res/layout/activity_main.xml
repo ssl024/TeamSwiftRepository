@@ -22,6 +22,6 @@
         android:layout_below="@+id/textView1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="72dp"
-        android:text="Button" />
+        android:text="@string/info_button_name" />
 
 </RelativeLayout>

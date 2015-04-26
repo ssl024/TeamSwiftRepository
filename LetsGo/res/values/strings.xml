@@ -4,5 +4,6 @@
     <string name="app_name">Lets Go</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="info_button_name">Strings are in: res > values > strings.xml</string>
 
 </resources>
