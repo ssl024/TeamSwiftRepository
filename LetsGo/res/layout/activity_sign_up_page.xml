@@ -9,69 +9,67 @@
     tools:context="edu.ucsd.teamswift.letsgo.SignUpPage" >
 
     <EditText
-        android:id="@+id/editText3"
-        android:layout_width="wrap_content"
+        android:id="@+id/signUpP2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="27dp"
+        android:layout_alignRight="@+id/signUpCancelBut"
+        android:layout_centerVertical="true"
         android:ems="10"
-        android:inputType="textPassword"
-        android:text="@string/signUpPassword2" />
+        android:hint="@string/signUpPasswordHint2"
+        android:inputType="textPassword" />
 
     <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
+        android:id="@+id/signUpCancelBut"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/editText3"
-        android:layout_marginLeft="34dp"
-        android:layout_marginTop="22dp"
+        android:layout_below="@+id/signUpSubmitBut"
+        android:layout_centerHorizontal="true"
         android:text="@string/cancelBut" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/signUpE2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button1"
-        android:layout_alignBottom="@+id/button1"
-        android:layout_alignRight="@+id/editText1"
+        android:layout_above="@+id/signUpP1"
+        android:layout_alignLeft="@+id/signUpP1"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="@string/signUpEmailHint2"
+        android:inputType="textEmailAddress" />
+
+    <Button
+        android:id="@+id/signUpSubmitBut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/signUpP2"
+        android:layout_below="@+id/signUpP2"
+        android:layout_marginTop="16dp"
         android:text="@string/submitBut" />
 
     <EditText
-        android:id="@+id/editText1"
-        android:layout_width="wrap_content"
+        android:id="@+id/signUpP1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/editText3"
-        android:layout_marginTop="44dp"
+        android:layout_above="@+id/signUpP2"
+        android:layout_alignLeft="@+id/signUpP2"
+        android:layout_marginBottom="10dp"
         android:ems="10"
-        android:inputType="textEmailAddress"
-        android:text="@string/signUpEmail" />
+        android:hint="@string/signUpPasswordHint1"
+        android:inputType="textPassword" />
 
     <EditText
-        android:id="@+id/editText2"
-        android:layout_width="wrap_content"
+        android:id="@+id/signUpE1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText1"
-        android:layout_below="@+id/editText1"
-        android:layout_marginTop="59dp"
+        android:layout_above="@+id/signUpE2"
+        android:layout_alignLeft="@+id/signUpE2"
+        android:layout_marginBottom="8dp"
         android:ems="10"
-        android:inputType="textPassword"
-        android:text="@string/signUpPassword1" >
+        android:hint="@string/signUpEmailHint1"
+        android:inputType="textEmailAddress"
+        android:text="@string/signUpEmail" >
 
         <requestFocus />
     </EditText>
-
-    <EditText
-        android:id="@+id/editText4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText3"
-        android:layout_below="@+id/editText1"
-        android:layout_marginTop="17dp"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:text="@string/signUpEmail2" />
 
 </RelativeLayout>
