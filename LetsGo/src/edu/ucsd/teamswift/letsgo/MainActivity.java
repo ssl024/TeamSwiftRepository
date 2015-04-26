@@ -1,3 +1,13 @@
+/* Group: Team Swift              Project: Lesgo
+ * Description: Opening Page of "Lets Go" Android Application. Allows user to
+ * 			    sign up or sign in to application
+ * 
+ * Page Created: Steven
+ * Page Modified by:
+ * 		Sang : Created event handling for sign up button and created transition to second page
+ * 
+ */
+
 package edu.ucsd.teamswift.letsgo;
 
 import android.app.Activity;	
@@ -17,6 +27,7 @@ public class MainActivity extends Activity {
 		
 		//Lets program look for and find the sign up button
 		Button signUpButton = (Button)this.findViewById(R.id.signUpButton);
+		
 		signUpButton.setOnClickListener(new View.OnClickListener() {
 			
 			//System handles the click on sign up button

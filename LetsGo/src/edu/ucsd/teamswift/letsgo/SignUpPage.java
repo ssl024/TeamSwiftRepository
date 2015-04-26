@@ -1,3 +1,13 @@
+/* Group: Team Swift              Project: Lesgo
+ * Description: Sign Up Form page of "Lets Go" Android Application. Allows user to
+ * 			    sign up for an account to use "Lets Go" program.
+ * 
+ * Page Created: Sang
+ * Page Modified by:
+ * 
+ */
+
+
 package edu.ucsd.teamswift.letsgo;
 
 import android.app.Activity;
