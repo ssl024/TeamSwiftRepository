@@ -29,8 +29,8 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		
 		//Lets program look for and find the sign up button
-		Button signUpBut = (Button)this.findViewById(R.id.signUpButton);
-		Button logInBut = (Button)this.findViewById(R.id.logInButton);
+		Button signUpBut = (Button)this.findViewById(R.id.signUpBut);
+		Button logInBut = (Button)this.findViewById(R.id.logInBut);
 			
 		signUpBut.setOnClickListener(new View.OnClickListener() {
 			
