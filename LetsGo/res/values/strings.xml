@@ -12,6 +12,8 @@
     <string name="passwordHint">Password</string>
     <string name="title_activity_sign_in_page">Sign In</string>
     <string name="title_activity_sign_up_page">Sign Up</string>
+    <string name="signUpName"></string>
+    <string name="signUpNameHint">Name</string>
     <string name="signUpEmail"></string>
     <string name="signUpEmail2"></string>
 	<string name="signUpEmailHint1">Enter E-mail</string>
