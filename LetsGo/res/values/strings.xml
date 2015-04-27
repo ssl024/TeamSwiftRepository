@@ -19,5 +19,8 @@
     <string name="cancelBut">Cancel</string>
     <string name="submitBut">Submit</string>
     <string name="signUpEmail2">re enter email</string>
+    <string name="title_activity_home_page">HomePage</string>
+    <string name="letsGoPlay">Lets Go Play</string>
+    <string name="activites">Active Activites</string>
 
 </resources>

@@ -26,9 +26,10 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		
 		//Lets program look for and find the sign up button
-		Button signUpButton = (Button)this.findViewById(R.id.signUpButton);
-		
-		signUpButton.setOnClickListener(new View.OnClickListener() {
+		Button signUpBut = (Button)this.findViewById(R.id.signUpButton);
+		Button logInBut = (Button)this.findViewById(R.id.logInButton);
+			
+		signUpBut.setOnClickListener(new View.OnClickListener() {
 			
 			//System handles the click on sign up button
 			@Override
@@ -43,6 +44,20 @@ public class MainActivity extends Activity {
 				//overridePendingTransition(R.animator.transition_to_sign_up_page, R.animator.transition_sign_up_page_2);
 			}
 		});
+		
+
+		logInBut.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				
+				//Intent will allow user to transition to sign up page
+				Intent moveToHome = new Intent(MainActivity.this, HomePage.class);
+				startActivity(moveToHome);
+				
+			}
+		});
+		
 	}
 
 	@Override
