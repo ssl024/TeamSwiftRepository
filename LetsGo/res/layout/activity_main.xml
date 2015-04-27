@@ -32,29 +32,37 @@
         android:hint="@string/passwordHint"
         android:inputType="textPassword"
         android:text="@string/userPassword" />
+ 
+    <Button
+        android:id="@+id/logInButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/userPassword"
+        android:layout_below="@+id/userEmail"
+        android:layout_marginTop="117dp"
+        android:text="@string/logInButton" />
+    
+    <Button
+        android:id="@+id/signUpButton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/logInButton"
+        android:layout_alignBottom="@+id/logInButton"
+        android:layout_alignRight="@+id/userEmail"
+        android:text="@string/signUpButton" />
     
     <CheckedTextView
         android:id="@+id/checkedTextView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/userPassword"
-        android:layout_below="@+id/userPassword"
-        android:layout_marginLeft="7dp"
-        android:text="@string/forgotPassword"
-        android:textSize="12sp"
-        android:gravity="center"/>
+        android:layout_below="@+id/signUpButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp"
+        android:text="@string/forgotPassword" />
 
 
-    <Button
-        android:id="@+id/logInBut"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/signUpBut"
-        android:layout_below="@+id/checkedTextView1"
-        android:layout_marginTop="20dp"
-        android:text="@string/logInBut"
-        android:textSize="20sp"
-        android:gravity="center"/>
+
     
 	<Button
         android:id="@+id/signUpBut"
@@ -64,7 +72,7 @@
         android:layout_alignLeft="@+id/userPassword"
         android:layout_below="@+id/checkedTextView1"
         android:layout_marginTop="68dp"
-        android:text="@string/signUpBut"
+        android:text="@string/signUpButton"
         android:textSize="20sp"
         android:gravity="center"/>
     
