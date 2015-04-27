@@ -2,7 +2,6 @@
 <resources>
 
     <string name="app_name">Lets Go</string>
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="signUpButton">Sign up</string>
     <string name="logInButton">Log in</string>
@@ -11,16 +10,21 @@
     <string name="forgotPassword">Forgot Password?</string>
     <string name="logInHint">E-mail</string>
     <string name="passwordHint">Password</string>
-    <string name="title_activity_sign_in_page">SignInPage</string>
-    <string name="title_activity_sign_up_page">SignUpPage</string>
-    <string name="signUpEmail">e mail</string>
-    <string name="signUpPassword1">Password</string>
-    <string name="signUpPassword2">Re Enter password</string>
+    <string name="title_activity_sign_in_page">Sign In</string>
+    <string name="title_activity_sign_up_page">Sign Up</string>
+    <string name="signUpEmail"></string>
+	<string name="signUpEmailHint1">Enter E-mail</string>
+	<string name="signUpEmailHint2">Re-enter E-mail</string>
+    <string name="signUpPassword1"></string>
+    <string name="signUpPassword2"></string>
+	<string name="signUpPasswordHint1">Enter Password</string>
+	<string name="signUpPasswordHint2">Re-enter Password</string>
     <string name="cancelBut">Cancel</string>
     <string name="submitBut">Submit</string>
     <string name="signUpEmail2">re enter email</string>
     <string name="title_activity_home_page">HomePage</string>
     <string name="letsGoPlay">Lets Go Play</string>
-    <string name="activites">Active Activites</string>
+    <string name="activites">Active Activities</string>
+
 
 </resources>

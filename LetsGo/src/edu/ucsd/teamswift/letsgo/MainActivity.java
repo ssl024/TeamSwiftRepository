@@ -1,4 +1,5 @@
-/* Group: Team Swift              Project: Lesgo
+/* Project: Lets Go
+ * Group: Team Swift
  * Description: Opening Page of "Lets Go" Android Application. Allows user to
  * 			    sign up or sign in to application
  * 
@@ -13,12 +14,14 @@ package edu.ucsd.teamswift.letsgo;
 import android.app.Activity;	
 import android.content.Intent;
 import android.os.Bundle;
+//import android.util.Log;	// For logcat logging/debugging
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
+import android.view.View;	// For button OnClick event handling
 import android.widget.Button;
 
 public class MainActivity extends Activity {
+
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
