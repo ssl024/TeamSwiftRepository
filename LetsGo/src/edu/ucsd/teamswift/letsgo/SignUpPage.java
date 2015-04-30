@@ -16,6 +16,7 @@ import com.parse.ParseException;
 import com.parse.SignUpCallback;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -127,8 +128,8 @@ public class SignUpPage extends Activity {
 			@Override
 			public void onClick(View v) {
 				
-				// TODO go back to MainActivities 
-				
+				Intent moveToMainActivityPage = new Intent(SignUpPage.this, MainActivity.class);
+				startActivity(moveToMainActivityPage);
 			}
 		});
 	}
