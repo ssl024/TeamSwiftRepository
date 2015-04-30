@@ -67,7 +67,8 @@ public class SignUpPage extends Activity {
 						|| passwordString.equals("") || rePasswordString.equals(""))
 				{
 					/* TODO */
-					Log.v("FieldForms", "ALL FIELDS ARE EMPTY");
+					/* Break this if statement into individual if statements */
+					Log.e("FieldForms", "FIELDS ARE EMPTY");
 					/* Tell user to complete form */
 					/* Pop up menu */
 				}
@@ -75,7 +76,7 @@ public class SignUpPage extends Activity {
 				else if (!emailString.equals(reEmailString))
 				{
 					/* TODO */
-					Log.v("FieldForms", "EMAIL DOESNT MATCH");
+					Log.e("FieldForms", "EMAIL DOESNT MATCH");
 					/* Tell user that emails are not the same */
 					/* Pop up menu */
 				}
@@ -83,7 +84,7 @@ public class SignUpPage extends Activity {
 				else if (!passwordString.equals(rePasswordString))
 				{
 					/* TODO */
-					Log.v("FieldForms", "PASSWORD DOESNT MATCH");
+					Log.e("FieldForms", "PASSWORD DOESNT MATCH");
 					/* Tell user that passwords are not the same */
 					/* Pop up menu */
 				}

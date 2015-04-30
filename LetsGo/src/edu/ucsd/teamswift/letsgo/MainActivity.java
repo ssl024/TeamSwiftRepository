@@ -12,15 +12,20 @@
 package edu.ucsd.teamswift.letsgo;
 
 import android.app.Activity;	
+import android.app.DialogFragment;
 import android.content.Intent;
 import android.os.Bundle;
 //import android.util.Log;	// For logcat logging/debugging
-import android.view.Menu;
-import android.view.MenuItem;
+//import android.view.Menu;
+//import android.view.MenuItem;
 import android.view.View;	// For button OnClick event handling
 import android.widget.Button;
 
 public class MainActivity extends Activity {
+
+	Button forgotPasswordBut;
+	Button signUpBut;
+	Button logInBut;
 
 
 	@Override
@@ -29,8 +34,19 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		
 		//Lets program look for and find the sign up button
-		Button signUpBut = (Button)this.findViewById(R.id.signUpBut);
-		Button logInBut = (Button)this.findViewById(R.id.logInBut);
+		forgotPasswordBut = (Button)this.findViewById(R.id.forgotPasswordBut);
+		signUpBut = (Button)this.findViewById(R.id.signUpBut);
+		logInBut = (Button)this.findViewById(R.id.logInBut);
+		
+		forgotPasswordBut.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				DialogFragment dialogPopup = new ForgotPasswordDialog();
+				
+				dialogPopup.show(getFragmentManager(), "ForgotPasswordDialogTag");
+			}
+		});
 			
 		signUpBut.setOnClickListener(new View.OnClickListener() {
 			

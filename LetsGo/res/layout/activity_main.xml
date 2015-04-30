@@ -8,7 +8,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="edu.ucsd.teamswift.letsgo.MainActivity" >
-
+    
     <EditText
         android:id="@+id/userEmail"
         android:layout_width="match_parent"
@@ -32,26 +32,25 @@
         android:hint="@string/passwordHint"
         android:inputType="textPassword"
         android:text="@string/userPassword" />
-    
-    <CheckedTextView
-        android:id="@+id/checkedTextView1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/userPassword"
-        android:layout_below="@+id/userPassword"
-        android:layout_marginLeft="7dp"
-        android:text="@string/forgotPassword"
-        android:textSize="12sp"
-        android:gravity="center"/>
 
+	<Button
+	    android:id="@+id/forgotPasswordBut"
+	    android:layout_width="match_parent"
+	    android:layout_height="30dp"
+	    android:layout_alignRight="@+id/userPassword"
+	    android:layout_below="@+id/userPassword"
+	    android:gravity="center"
+	    android:text="@string/forgotPassword"
+	    android:textSize="12sp"
+	    style="?android:attr/borderlessButtonStyle" />
 
     <Button
         android:id="@+id/logInBut"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/signUpBut"
-        android:layout_below="@+id/checkedTextView1"
-        android:layout_marginTop="20dp"
+        android:layout_below="@+id/forgotPasswordBut"
+        android:layout_marginTop="15dp"
         android:text="@string/logInBut"
         android:textSize="20sp"
         android:gravity="center"/>
@@ -62,10 +61,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/userPassword"
-        android:layout_below="@+id/checkedTextView1"
-        android:layout_marginTop="68dp"
+        android:layout_below="@+id/logInBut"
+        android:layout_marginTop="5dp"
         android:text="@string/signUpBut"
         android:textSize="20sp"
         android:gravity="center"/>
-    
+
 </RelativeLayout>
