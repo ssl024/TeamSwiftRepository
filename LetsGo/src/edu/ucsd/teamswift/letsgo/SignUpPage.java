@@ -76,7 +76,7 @@ public class SignUpPage extends Activity {
 				else if (!emailString.equals(reEmailString))
 				{
 					/* TODO */
-					Log.e("FieldForms", "Noor Bakkal");
+					Log.e("FieldForms", "EMAIL DOESNT MATCH");
 					/* Tell user that emails are not the same */
 					/* Pop up menu */
 				}
