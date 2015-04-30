@@ -15,18 +15,25 @@
     <string name="signUpName"></string>
     <string name="signUpNameHint">Name</string>
     <string name="signUpEmail"></string>
-	<string name="signUpEmailHint1">Enter E-mail</string>
-	<string name="signUpEmailHint2">Re-enter E-mail</string>
+    <string name="signUpEmailHint1">Enter E-mail</string>
+    <string name="signUpEmailHint2">Re-enter E-mail</string>
     <string name="signUpPassword1"></string>
     <string name="signUpPassword2"></string>
-	<string name="signUpPasswordHint1">Enter Password</string>
-	<string name="signUpPasswordHint2">Re-enter Password</string>
+    <string name="signUpPasswordHint1">Enter Password</string>
+    <string name="signUpPasswordHint2">Re-enter Password</string>
     <string name="cancelBut">Cancel</string>
     <string name="submitBut">Submit</string>
     <string name="signUpEmail2">re enter email</string>
     <string name="title_activity_home_page">HomePage</string>
     <string name="letsGoPlay">Lets Go Play</string>
     <string name="activites">Active Activities</string>
-
+    <string name="title_activity_create_join_page">CreateJoinPage</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_create_category_page">CreateCategoryPage</string>
+    <string name="title_activity_join_category_page">JoinCategoryPage</string>
+    <string name="title_activity_create_actvity_page">CreateActvityPage</string>
+    <string name="title_activity_join_available_game_page">JoinAvailableGamePage</string>
+    <string name="letsGoPlayBut">Let\'s Go Play</string>
+    <string name="title_activity_my_activities_page">MyActivitiesPage</string>
 
 </resources>

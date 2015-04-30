@@ -5,8 +5,8 @@
  * 
  * Page Created: Steven
  * Page Modified by:
- * 		Sang : Created event handling for sign up button and created transition to second page
- * 
+ * 		Sang : Created event handling for lets go play and active activities
+ * 			 
  */
 
 package edu.ucsd.teamswift.letsgo;
@@ -15,13 +15,16 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 //import android.util.Log;	// For logcat logging/debugging
-import android.view.Menu;
-import android.view.MenuItem;
+//import android.view.Menu;
+//import android.view.MenuItem;
 import android.view.View;	// For button OnClick event handling
 import android.widget.Button;
 
 public class MainActivity extends Activity {
-
+	
+	//Local variable
+	private Button signUpBut;
+	private Button logInBut;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -29,12 +32,11 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		
 		//Lets program look for and find the sign up button
-		Button signUpBut = (Button)this.findViewById(R.id.signUpBut);
-		Button logInBut = (Button)this.findViewById(R.id.logInBut);
-			
+		signUpBut = (Button)this.findViewById(R.id.signUpBut);
+		logInBut = (Button)this.findViewById(R.id.logInBut);
+		
+		//System handles the click on sign up button
 		signUpBut.setOnClickListener(new View.OnClickListener() {
-			
-			//System handles the click on sign up button
 			@Override
 			public void onClick(View v) {
 				
@@ -43,23 +45,27 @@ public class MainActivity extends Activity {
 				startActivity(moveToSignUpPage);
 				
 				//Method to apply transition animation between activities
-				//This is if we want it
 				//overridePendingTransition(R.animator.transition_to_sign_up_page, R.animator.transition_sign_up_page_2);
 			}
 		});
 		
-
+		//System handles the click on log in button
 		logInBut.setOnClickListener(new View.OnClickListener() {
-			
 			@Override
 			public void onClick(View v) {
 				
-				//Intent will allow user to transition to sign up page
+				/*TODO*/
+				//Before transition, check if Login Credential are good on parse carry token 
+				
+				//Intent will allow user to transition to Home Screen
 				Intent moveToHome = new Intent(MainActivity.this, HomePage.class);
 				startActivity(moveToHome);
 				
 			}
 		});
+		
+		/*TODO*/
+	    //System to handle click on forgot password
 		
 	}
 

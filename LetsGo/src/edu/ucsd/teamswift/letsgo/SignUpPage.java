@@ -28,17 +28,16 @@ import android.widget.Toast;
 public class SignUpPage extends Activity {
 
 	/* Variables for the sign up page */
-	EditText emailEditText;
-	EditText reEmailEditText;
-	EditText passwordEditText;
-	EditText rePasswordEditText;
-	Button submitButton;
-	Button cancelButton;
-	
-	String emailString;
-	String reEmailString;
-	String passwordString;
-	String rePasswordString;
+	private EditText emailEditText;
+	private EditText reEmailEditText;
+	private EditText passwordEditText;
+	private EditText rePasswordEditText;
+	private Button submitButton;
+	private Button cancelButton;
+	private String emailString;
+	private String reEmailString;
+	private String passwordString;
+	private String rePasswordString;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -53,8 +52,8 @@ public class SignUpPage extends Activity {
 		submitButton = (Button)findViewById(R.id.signUpSubmitBut);
 		cancelButton = (Button)findViewById(R.id.signUpCancelBut);
 		
+		/*System handles the submit button*/
 		submitButton.setOnClickListener(new View.OnClickListener() {
-			
 			@Override
 			public void onClick(View v) {
 				emailString = emailEditText.getText().toString();
@@ -62,13 +61,12 @@ public class SignUpPage extends Activity {
 				passwordString = passwordEditText.getText().toString();
 				rePasswordString = rePasswordEditText.getText().toString();
 				
-				/* Check if all fields are filled */
+				/* TODO */
+				//Break this "if" statement to give pop up for each individual error in feild
 				if (emailString.equals("") || reEmailString.equals("") 
 						|| passwordString.equals("") || rePasswordString.equals(""))
 				{
 					/* TODO */
-					Log.v("FieldForms", "ALL FIELDS ARE EMPTY");
-					/* Tell user to complete form */
 					/* Pop up menu */
 				}
 				/* Check if emails are the same */
@@ -87,9 +85,12 @@ public class SignUpPage extends Activity {
 					/* Tell user that passwords are not the same */
 					/* Pop up menu */
 				}
+				
 				/* All checks are good */
 				else
 				{
+					/*TODO*/
+					//Fix parse 
 					/* Save new user into Parse.com Data Storage */
 					ParseUser user = new ParseUser();
 					
@@ -103,11 +104,13 @@ public class SignUpPage extends Activity {
 							if (exception == null)
 							{
 								/* TODO */
+								//If good pop window of confirmation and then Move to Profile Page
 								Toast.makeText(getApplicationContext(), "Make popup confirm 1", Toast.LENGTH_LONG).show();
 							}
 							else
 							{
 								/* TODO */
+								//If not good, pop up window why not good and stay on page
 								Toast.makeText(getApplicationContext(), "Make popup confirm 2", Toast.LENGTH_LONG).show();
 							}
 						}
@@ -115,8 +118,19 @@ public class SignUpPage extends Activity {
 				}
 			}
 		});
+		
+		//Handles cancel button
+		cancelButton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				
+				// TODO go back to MainActivities 
+				
+			}
+		});
 	}
-
+	
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
