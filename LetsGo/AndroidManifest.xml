@@ -34,6 +34,30 @@
             android:name=".HomePage"
             android:label="@string/title_activity_home_page" >
         </activity>
+        <activity
+            android:name=".CreateJoinPage"
+            android:label="@string/title_activity_create_join_page" >
+        </activity>
+        <activity
+            android:name=".CreateCategoryPage"
+            android:label="@string/title_activity_create_category_page" >
+        </activity>
+        <activity
+            android:name=".JoinCategoryPage"
+            android:label="@string/title_activity_join_category_page" >
+        </activity>
+        <activity
+            android:name=".CreateActvityPage"
+            android:label="@string/title_activity_create_actvity_page" >
+        </activity>
+        <activity
+            android:name=".JoinAvailableGamePage"
+            android:label="@string/title_activity_join_available_game_page" >
+        </activity>
+        <activity
+            android:name=".MyActivitiesPage"
+            android:label="@string/title_activity_my_activities_page" >
+        </activity>
     </application>
 
 </manifest>
