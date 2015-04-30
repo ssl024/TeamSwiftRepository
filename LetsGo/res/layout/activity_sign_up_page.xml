@@ -67,10 +67,7 @@
         android:ems="10"
         android:hint="@string/signUpEmailHint1"
         android:inputType="textEmailAddress"
-        android:text="@string/signUpEmail" >
-
-        <requestFocus />
-    </EditText>
+        android:text="@string/signUpEmail" />
 
     <EditText
         android:id="@+id/signUpName"
@@ -81,6 +78,8 @@
         android:layout_marginBottom="7dp"
         android:ems="10"
         android:hint="@string/signUpNameHint"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName" > 
+    <requestFocus />
+    </EditText>
    
 </RelativeLayout>
