@@ -51,11 +51,19 @@ public class MainActivity extends Activity {
 		signUpBut.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				
+			
 				//Intent will allow user to transition to sign up page
 				Intent moveToSignUpPage = new Intent(MainActivity.this, SignUpPage.class);
-				startActivity(moveToSignUpPage);
 				
+				//To verify that a activity can handle the event
+				if (moveToSignUpPage.resolveActivity(getPackageManager()) != null){
+					
+					//Then moves to Sign UpPage
+					startActivity(moveToSignUpPage);
+					
+					//After move to Sign Up Page, Removes Main Activity Page from stack
+					finish();
+				}
 				//Method to apply transition animation between activities
 				//overridePendingTransition(R.animator.transition_to_sign_up_page, R.animator.transition_sign_up_page_2);
 			}

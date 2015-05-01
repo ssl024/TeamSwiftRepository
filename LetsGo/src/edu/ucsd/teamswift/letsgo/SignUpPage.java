@@ -128,8 +128,11 @@ public class SignUpPage extends Activity {
 			@Override
 			public void onClick(View v) {
 				
-				Intent moveToMainActivityPage = new Intent(SignUpPage.this, MainActivity.class);
-				startActivity(moveToMainActivityPage);
+				//Better way to handle cancel, remove current page from stack and go back				
+				finish();
+				
+				/*Intent moveToMainActivityPage = new Intent(SignUpPage.this, MainActivity.class);
+				startActivity(moveToMainActivityPage);*/
 			}
 		});
 	}
