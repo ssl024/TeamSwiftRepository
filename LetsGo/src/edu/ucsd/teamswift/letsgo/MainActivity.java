@@ -61,8 +61,7 @@ public class MainActivity extends Activity {
 					//Then moves to Sign UpPage
 					startActivity(moveToSignUpPage);
 					
-					//After move to Sign Up Page, Removes Main Activity Page from stack
-					finish();
+
 				}
 				//Method to apply transition animation between activities
 				//overridePendingTransition(R.animator.transition_to_sign_up_page, R.animator.transition_sign_up_page_2);

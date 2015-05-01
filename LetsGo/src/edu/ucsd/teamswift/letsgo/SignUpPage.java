@@ -119,7 +119,11 @@ public class SignUpPage extends Activity {
 							}
 						}
 					});
+				
 				}
+				
+				//After move to Sign Up Page, Removes Main Activity Page from stack
+				finish();		
 			}
 		});
 		
