@@ -9,6 +9,27 @@
     tools:context="edu.ucsd.teamswift.letsgo.SignUpPage" >
     
     <EditText
+        android:id="@+id/firstName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/signUpE1"
+        android:layout_alignParentTop="true"
+        android:ems="10"
+        android:hint="@string/signUpNameHint"
+        android:inputType="textPersonName"
+        android:text="@string/firstName" /> 
+    <EditText
+        android:id="@+id/lastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/signUpE1"
+        android:layout_alignLeft="@+id/signUpName"
+        android:layout_alignRight="@+id/signUpName"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/lastName" />
+    
+    <EditText
         android:id="@+id/signUpP2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,14 +38,6 @@
         android:ems="10"
         android:hint="@string/signUpPasswordHint2"
         android:inputType="textPassword" />
-
-    <Button
-        android:id="@+id/signUpCancelBut"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/signUpSubmitBut"
-        android:layout_centerHorizontal="true"
-        android:text="@string/cancelBut" />
 
     <EditText
         android:id="@+id/signUpE2"
@@ -36,15 +49,6 @@
         android:ems="10"
         android:hint="@string/signUpEmailHint2"
         android:inputType="textEmailAddress" />
-
-    <Button
-        android:id="@+id/signUpSubmitBut"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/signUpP2"
-        android:layout_below="@+id/signUpP2"
-        android:layout_marginTop="16dp"
-        android:text="@string/submitBut" />
 
     <EditText
         android:id="@+id/signUpP1"
@@ -69,17 +73,24 @@
         android:inputType="textEmailAddress"
         android:text="@string/signUpEmail" />
 
-    <EditText
-        android:id="@+id/signUpName"
+
+    <Button
+        android:id="@+id/signUpCancelBut"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/signUpE1"
-        android:layout_alignLeft="@+id/signUpE1"
-        android:layout_marginBottom="7dp"
-        android:ems="10"
-        android:hint="@string/signUpNameHint"
-        android:inputType="textPersonName" > 
-    <requestFocus />
-    </EditText>
+        android:layout_below="@+id/signUpSubmitBut"
+        android:layout_centerHorizontal="true"
+        android:text="@string/cancelBut" />
+
+    <Button
+        android:id="@+id/signUpSubmitBut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/signUpP2"
+        android:layout_below="@+id/signUpP2"
+        android:layout_marginTop="15dp"
+        android:text="@string/submitBut" />
+
+
    
 </RelativeLayout>
