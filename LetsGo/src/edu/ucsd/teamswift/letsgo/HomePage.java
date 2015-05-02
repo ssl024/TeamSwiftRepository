@@ -28,6 +28,7 @@ public class HomePage extends Activity {
 			@Override
 			public void onClick(View v) {
 			/*TODO*/
+				//Eric link to Join and Create
 			// POP out Menu to chose between Create Game or Join Game
 
 			}
