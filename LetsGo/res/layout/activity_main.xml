@@ -10,28 +10,18 @@
     tools:context="edu.ucsd.teamswift.letsgo.MainActivity" >
     
     <EditText
+        style="@style/inputUserEmail1"
         android:id="@+id/userEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="200dp"
-        android:ems="10"
-        android:hint="@string/logInHint"
-        android:inputType="textEmailAddress"
-        android:text="@string/userEmail"/>
+        android:layout_marginTop="200dp"/>
 
 	<EditText
+	    style="@style/inputUserPassword"
         android:id="@+id/userPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/userEmail"
         android:layout_below="@+id/userEmail"
         android:layout_marginTop="9dp"
         android:ems="10"
-        android:hint="@string/passwordHint"
-        android:inputType="textPassword"
-        android:text="@string/userPassword" />
+        android:hint="@string/passwordHint1"/>
 
 	<Button
 	    android:id="@+id/forgotPasswordBut"

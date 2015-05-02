@@ -16,5 +16,29 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
-
+	<style name="inputUserEmail" >
+	    <item name="android:inputType">textEmailAddress</item>
+        <item name="android:text">@string/userEmail</item>        
+	    <item name="android:layout_width">match_parent</item>
+	    <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#00FF00</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:ems">10</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+	</style>
+	<style name="inputUserEmail1" parent="inputUserEmail">
+	    <item name="android:hint">@string/emailHint1</item>
+	</style>
+	<style name="inputUserPassword">
+        <item name="android:inputType">textPassword</item>
+        <item name="android:text">@string/userPassword</item>        
+	    <item name="android:layout_width">match_parent</item>
+	    <item name="android:layout_height">wrap_content</item>
+	    <item name="android:textColor">#00FF00</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:ems">10</item>
+	</style>
+	
+	
 </resources>

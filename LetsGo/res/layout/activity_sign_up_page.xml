@@ -15,7 +15,7 @@
         android:layout_alignRight="@+id/signUpCancelBut"
         android:layout_centerVertical="true"
         android:ems="10"
-        android:hint="@string/signUpPasswordHint2"
+        android:hint="@string/passwordHint2"
         android:inputType="textPassword" />
 
     <Button
@@ -34,7 +34,7 @@
         android:layout_alignLeft="@+id/signUpP1"
         android:layout_marginBottom="8dp"
         android:ems="10"
-        android:hint="@string/signUpEmailHint2"
+        android:hint="@string/emailHint2"
         android:inputType="textEmailAddress" />
 
     <Button
@@ -54,7 +54,7 @@
         android:layout_alignLeft="@+id/signUpP2"
         android:layout_marginBottom="10dp"
         android:ems="10"
-        android:hint="@string/signUpPasswordHint1"
+        android:hint="@string/passwordHint1"
         android:inputType="textPassword" />
 
     <EditText
@@ -65,7 +65,7 @@
         android:layout_alignLeft="@+id/signUpE2"
         android:layout_marginBottom="8dp"
         android:ems="10"
-        android:hint="@string/signUpEmailHint1"
+        android:hint="@string/emailHint1"
         android:inputType="textEmailAddress"
         android:text="@string/signUpEmail" />
 
