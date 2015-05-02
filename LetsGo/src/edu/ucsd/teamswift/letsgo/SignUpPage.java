@@ -51,6 +51,20 @@ public class SignUpPage extends Activity {
 		rePasswordEditText = (EditText)findViewById(R.id.signUpP2);
 		submitButton = (Button)findViewById(R.id.signUpSubmitBut);
 		cancelButton = (Button)findViewById(R.id.signUpCancelBut);
+		//TODO Add field for first and last name
+		
+		//This is the method to pull phone number*****
+/*		private String getMyPhoneNumber(){
+		    TelephonyManager mTelephonyMgr;
+		    mTelephonyMgr = (TelephonyManager)
+		        getSystemService(Context.TELEPHONY_SERVICE); 
+		    return mTelephonyMgr.getLine1Number();
+		}
+
+		private String getMy10DigitPhoneNumber(){
+		    String s = getMyPhoneNumber();
+		    return s != null && s.length() > 2 ? s.substring(2) : null;
+		}  */
 		
 		/*System handles the submit button*/
 		submitButton.setOnClickListener(new View.OnClickListener() {
@@ -62,7 +76,7 @@ public class SignUpPage extends Activity {
 				rePasswordString = rePasswordEditText.getText().toString();
 				
 				/* TODO */
-				//Break this "if" statement to give pop up for each individual error in feild
+				//Break this "if" statement to give pop up for each individual error in field
 				if (emailString.equals("") || reEmailString.equals("") 
 						|| passwordString.equals("") || rePasswordString.equals(""))
 				{

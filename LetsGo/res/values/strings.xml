@@ -24,7 +24,7 @@
     <string name="signUpEmail2">re enter email</string>
     <string name="title_activity_home_page">HomePage</string>
     <string name="letsGoPlay">Lets Go Play</string>
-    <string name="activites">Active Activities</string>
+    <string name="activites">Activities</string>
     <string name="title_activity_create_join_page">CreateJoinPage</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_create_category_page">CreateCategoryPage</string>
@@ -34,5 +34,7 @@
     <string name="letsGoPlayBut">Let\'s Go Play</string>
     <string name="title_activity_my_activities_page">MyActivitiesPage</string>
     <string name="title_activity_test">TestActivity</string>
+    <string name="firstName">First Name</string>
+    <string name="lastName">Last Name</string>
 
 </resources>
