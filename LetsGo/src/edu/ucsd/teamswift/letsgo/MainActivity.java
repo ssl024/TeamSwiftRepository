@@ -36,7 +36,13 @@ public class MainActivity extends Activity {
 		forgotPasswordBut = (Button)this.findViewById(R.id.forgotPasswordBut);
 		signUpBut = (Button)this.findViewById(R.id.signUpBut);
 		logInBut = (Button)this.findViewById(R.id.logInBut);
-		
+	
+		/*
+		 * Forgot Password Button
+		 * 
+		 * Displays the forgot password dialog box
+		 * The class is located in ForgotPasswordDialog.java
+		 */
 		forgotPasswordBut.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
@@ -47,7 +53,11 @@ public class MainActivity extends Activity {
 			}
 		});
 			
-		//System handles the click on sign up button
+		/*
+		 * Sign Up Button
+		 * 
+		 * Transitions to the Sign Up Page
+		 */
 		signUpBut.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -55,21 +65,22 @@ public class MainActivity extends Activity {
 				//Intent will allow user to transition to sign up page
 				Intent moveToSignUpPage = new Intent(MainActivity.this, SignUpPage.class);
 				
-				//To verify that a activity can handle the event
-				if (moveToSignUpPage.resolveActivity(getPackageManager()) != null){
+				//Makes it so the sign up page is a unique task
+				moveToSignUpPage.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 					
-					//Then moves to Sign UpPage
-					startActivity(moveToSignUpPage);
+				//Then moves to Sign Up Page
+				startActivity(moveToSignUpPage);
 					
-					//After move to Sign Up Page, Removes Main Activity Page from stack
-					finish();
-				}
 				//Method to apply transition animation between activities
 				//overridePendingTransition(R.animator.transition_to_sign_up_page, R.animator.transition_sign_up_page_2);
 			}
 		});
-		
-		//System handles the click on log in button
+	
+		/*
+		 * Log In Button
+		 * 
+		 * Logic that handles the log in and transitions to the Home Page
+		 */
 		logInBut.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -79,6 +90,11 @@ public class MainActivity extends Activity {
 				
 				//Intent will allow user to transition to Home Screen
 				Intent moveToHome = new Intent(MainActivity.this, HomePage.class);
+		
+				//Makes it so the Home Page is a unique task
+				moveToHome.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+			
+				//The moves to the Home Page
 				startActivity(moveToHome);
 				
 			}

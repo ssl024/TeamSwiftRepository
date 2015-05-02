@@ -28,7 +28,6 @@ import android.widget.Toast;
 
 public class SignUpPage extends Activity {
 
-	/* Variables for the sign up page */
 	private EditText emailEditText;
 	private EditText reEmailEditText;
 	private EditText passwordEditText;
@@ -68,7 +67,6 @@ public class SignUpPage extends Activity {
 						|| passwordString.equals("") || rePasswordString.equals(""))
 				{
 					/* TODO */
-					/* Break this if statement into individual if statements */
 					Log.e("FieldForms", "FIELDS ARE EMPTY");
 					/* Tell user to complete form */
 					/* Pop up menu */
@@ -122,17 +120,22 @@ public class SignUpPage extends Activity {
 				}
 			}
 		});
-		
-		//Handles cancel button
+	
+		/*
+		 * Cancel Button
+		 * 
+		 * Returns from the Sign Up Page to the Main Activity
+		 */
 		cancelButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				
-				//Better way to handle cancel, remove current page from stack and go back				
-				finish();
+				Intent moveToMainActivityPage = new Intent(SignUpPage.this, MainActivity.class);
+		
+				//Clears all other activities including this one when returning to the Main Activity
+				moveToMainActivityPage.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 				
-				/*Intent moveToMainActivityPage = new Intent(SignUpPage.this, MainActivity.class);
-				startActivity(moveToMainActivityPage);*/
+				startActivity(moveToMainActivityPage);
 			}
 		});
 	}
