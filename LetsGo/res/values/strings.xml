@@ -35,5 +35,6 @@
     <string name="title_activity_join_available_game_page">JoinAvailableGamePage</string>
     <string name="letsGoPlayBut">Let\'s Go Play</string>
     <string name="title_activity_my_activities_page">MyActivitiesPage</string>
+    <string name="title_activity_test">TestActivity</string>
 
 </resources>
