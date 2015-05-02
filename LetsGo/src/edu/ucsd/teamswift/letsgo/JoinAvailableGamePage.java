@@ -12,7 +12,7 @@ public class JoinAvailableGamePage extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_join_available_game_page);
 	}
-
+	//Mazin join game link to game detail page
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.

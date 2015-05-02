@@ -12,7 +12,7 @@ public class MyActivitiesPage extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_my_activities_page);
 	}
-
+	//Milad UI and populate
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
