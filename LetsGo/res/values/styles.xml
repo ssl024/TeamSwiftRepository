@@ -91,13 +91,13 @@
 	</style>
 		<!-- Specific BUTTONS -->
 		<style name="buttonSubmit" parent="buttonLL">
-		    <item name="android:text">@string/submitBut</item>    
+		    <item name="android:text">@string/submitBut</item>  
 		</style>
 		<style name="buttonCancel" parent="buttonLL">
 			    <item name="android:text">@string/cancelBut</item>
 		</style>
 		<style name="buttonSignUp" parent="buttonLL">
-		    <item name="android:text">@string/signUpBut</item>
+		    <item name="android:text">@string/signUpBut</item>		    
 		</style>
 		<style name="buttonLogIn" parent="buttonLL">
 		    <item name="android:text">@string/logInBut</item>

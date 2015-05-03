@@ -21,7 +21,7 @@ public class HomePage extends Activity {
 		
 		//Lets program look for and find the Lets Go Play and Activities Button
 	    letsGoPlayBut = (Button)this.findViewById(R.id.letsGoPlayBut);
-		activitiesBut = (Button)this.findViewById(R.id.activitiesBut);
+		activitiesBut = (Button)this.findViewById(R.id.myActivitiesBut);
 		
 		//System handles Lets Go Play Button
 		letsGoPlayBut.setOnClickListener(new View.OnClickListener() {
