@@ -16,6 +16,10 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
+    
+    <!-- 
+    Basic User EMAIL Input format 
+    -->
 	<style name="inputUserEmail" >
 	    <item name="android:inputType">textEmailAddress</item>
         <item name="android:text">@string/userEmail</item>        
@@ -23,22 +27,82 @@
 	    <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">#00FF00</item>
         <item name="android:typeface">monospace</item>
+        <item name="android:layout_marginTop">9dp</item>
         <item name="android:ems">10</item>
-        <item name="android:layout_alignParentTop">true</item>
         <item name="android:layout_centerHorizontal">true</item>
 	</style>
-	<style name="inputUserEmail1" parent="inputUserEmail">
-	    <item name="android:hint">@string/emailHint1</item>
-	</style>
+		<!-- User EMAIL hint -->
+		<style name="inputUserEmail1" parent="inputUserEmail">
+		    <item name="android:hint">@string/emailHint1</item>
+		</style>
+		<style name="inputUserEmail2" parent="inputUserEmail">
+		    <item name="android:hint">@string/emailHint2</item>
+		</style>
+	
+    <!-- 
+    Basic User PASSWORD Input format 
+    -->		
 	<style name="inputUserPassword">
         <item name="android:inputType">textPassword</item>
-        <item name="android:text">@string/userPassword</item>        
-	    <item name="android:layout_width">match_parent</item>
+        <item name="android:text">@string/userPassword</item>   
+	    <item name="android:layout_width">match_parent</item>	    
 	    <item name="android:layout_height">wrap_content</item>
 	    <item name="android:textColor">#00FF00</item>
         <item name="android:typeface">monospace</item>
+        <item name="android:layout_marginTop">9dp</item>
         <item name="android:ems">10</item>
 	</style>
+		<!-- User PASSWORD HINTS -->
+		<style name="inputUserPassword1" parent="inputUserPassword">
+			<item name="android:hint">@string/passwordHint1</item>
+		</style>
+		<style name="inputUserPassword2" parent="inputUserPassword">
+		    <item name="android:hint">@string/passwordHint2</item>
+		</style>
+		
+	<!-- 
+	Basic User NAME Input format 
+	-->
+	<style name="name">
+	    <item name="android:inputType">textPersonName</item>
+	    <item name="android:layout_width">match_parent</item>	    
+	    <item name="android:layout_height">wrap_content</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:layout_marginTop">9dp</item>
+        <item name="android:ems">10</item>
+	    
+	</style>
+		<!-- Specific NAMES -->
+		<style name="firstName" parent="name">
+		    <item name="android:layout_alignParentTop">true</item>        	    
+		    <item name="android:hint">@string/firstNameHint</item>
+		</style>
+		<style name="lastName" parent="name">
+		   	<item name="android:hint">@string/lastNameHint</item>
+    	</style>
+    
+    <!-- 
+    	BUTTON Linear Layout format: Two BUTTONS on single line
+    -->
+	<style name="buttonLL">
+	    <item name="android:layout_width">0dp</item>
+	    <item name="android:layout_height">wrap_content</item>
+	    <item name="android:layout_weight">1</item>
+	</style>
+		<!-- Specific BUTTONS -->
+		<style name="buttonSubmit" parent="buttonLL">
+		    <item name="android:text">@string/submitBut</item>    
+		</style>
+		<style name="buttonCancel" parent="buttonLL">
+			    <item name="android:text">@string/cancelBut</item>
+		</style>
+		<style name="buttonSignUp" parent="buttonLL">
+		    <item name="android:text">@string/signUpBut</item>
+		</style>
+		<style name="buttonLogIn" parent="buttonLL">
+		    <item name="android:text">@string/logInBut</item>
+		</style>
+		
 	
-	
+		
 </resources>

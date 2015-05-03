@@ -7,54 +7,53 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:src="@drawable/"
+    android:scaleType="centerCrop"
     tools:context="edu.ucsd.teamswift.letsgo.MainActivity" >
-    
-    <EditText
-        style="@style/inputUserEmail1"
-        android:id="@+id/userEmail"
-        android:layout_marginTop="200dp"/>
-
+	
 	<EditText
-	    style="@style/inputUserPassword"
+	    android:id="@+id/userEmail"
+	    style="@style/inputUserEmail1"
+	    android:layout_alignParentTop="true"
+	    android:layout_marginTop="250dp">
+
+	    <requestFocus />
+	</EditText>
+	
+	<EditText
         android:id="@+id/userPassword"
+       	style="@style/inputUserPassword1"
         android:layout_alignLeft="@+id/userEmail"
-        android:layout_below="@+id/userEmail"
-        android:layout_marginTop="9dp"
-        android:ems="10"
-        android:hint="@string/passwordHint1"/>
+        android:layout_below="@+id/userEmail"/>
 
 	<Button
+	    style="?android:attr/borderlessButtonStyle"
 	    android:id="@+id/forgotPasswordBut"
-	    android:layout_width="match_parent"
-	    android:layout_height="30dp"
-	    android:layout_alignRight="@+id/userPassword"
-	    android:layout_below="@+id/userPassword"
-	    android:gravity="center"
 	    android:text="@string/forgotPassword"
 	    android:textSize="12sp"
-	    style="?android:attr/borderlessButtonStyle" />
+	    android:layout_width="match_parent"
+	    android:layout_height="20dp"
+	    android:layout_below="@+id/userPassword"
+	    android:gravity="center"/>
 
+	<!-- 
+    	To put multiple buttons on one line unit 
+    -->
+	<LinearLayout 
+	   	android:id="@+id/twoButtonLL"
+      	android:layout_width="match_parent"
+      	android:layout_height="wrap_content"
+      	android:layout_below="@+id/forgotPasswordBut"
+      	android:paddingTop= "15dp"
+      	android:paddingBottom= "15dp">
+       
     <Button
-        android:id="@+id/logInBut"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/signUpBut"
-        android:layout_below="@+id/forgotPasswordBut"
-        android:layout_marginTop="15dp"
-        android:text="@string/logInBut"
-        android:textSize="20sp"
-        android:gravity="center"/>
-    
-	<Button
         android:id="@+id/signUpBut"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/userPassword"
-        android:layout_below="@+id/logInBut"
-        android:layout_marginTop="5dp"
-        android:text="@string/signUpBut"
-        android:textSize="20sp"
-        android:gravity="center"/>
+        style="@style/buttonSignUp"/>
+     <Button
+        android:id="@+id/logInBut"
+        style="@style/buttonLogIn"/>
+    
+    </LinearLayout>
 
 </RelativeLayout>

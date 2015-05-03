@@ -10,87 +10,52 @@
     
     <EditText
         android:id="@+id/firstName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/signUpE1"
-        android:layout_alignParentTop="true"
-        android:ems="10"
-        android:hint="@string/signUpNameHint"
-        android:inputType="textPersonName"
-        android:text="@string/firstName" /> 
-    <EditText
-        android:id="@+id/lastName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/signUpE1"
-        android:layout_alignLeft="@+id/signUpName"
-        android:layout_alignRight="@+id/signUpName"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/lastName" />
+       	style="@style/firstName">
+        <requestFocus />
+    </EditText>
     
     <EditText
-        android:id="@+id/signUpP2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/signUpCancelBut"
-        android:layout_centerVertical="true"
-        android:ems="10"
-        android:hint="@string/passwordHint2"
-        android:inputType="textPassword" />
-
-    <EditText
-        android:id="@+id/signUpE2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/signUpP1"
-        android:layout_alignLeft="@+id/signUpP1"
-        android:layout_marginBottom="8dp"
-        android:ems="10"
-        android:hint="@string/emailHint2"
-        android:inputType="textEmailAddress" />
-
-    <EditText
-        android:id="@+id/signUpP1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/signUpP2"
-        android:layout_alignLeft="@+id/signUpP2"
-        android:layout_marginBottom="10dp"
-        android:ems="10"
-        android:hint="@string/passwordHint1"
-        android:inputType="textPassword" />
+        android:id="@+id/lastName"
+        style="@style/lastName"
+        android:layout_below="@+id/firstName"/>
 
     <EditText
         android:id="@+id/signUpE1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/signUpE2"
-        android:layout_alignLeft="@+id/signUpE2"
-        android:layout_marginBottom="8dp"
-        android:ems="10"
-        android:hint="@string/emailHint1"
-        android:inputType="textEmailAddress"
-        android:text="@string/signUpEmail" />
+        style="@style/inputUserEmail1"
+        android:layout_below="@+id/lastName"/>
+    
+    <EditText
+        android:id="@+id/signUpE2"
+		style="@style/inputUserEmail2"
+        android:layout_below="@+id/signUpE1"/>
 
-
+    <EditText
+        android:id="@+id/signUpP1"
+       	style="@style/inputUserPassword1"
+        android:layout_below="@+id/signUpE2"/>
+    
+    <EditText
+        android:id="@+id/signUpP2"
+       	style="@style/inputUserPassword2"
+       	android:layout_below="@+id/signUpP1"/>
+    
+    <!-- 
+    	To put multiple buttons on one line unit 
+    -->
+	<LinearLayout 
+	   	android:id="@+id/twoButtonLL"
+      	android:layout_width="match_parent"
+      	android:layout_height="wrap_content"
+      	android:layout_below="@+id/signUpP2"
+      	android:paddingTop= "15dp"
+      	android:paddingBottom= "15dp">
+        
     <Button
         android:id="@+id/signUpCancelBut"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/signUpSubmitBut"
-        android:layout_centerHorizontal="true"
-        android:text="@string/cancelBut" />
+        style="@style/buttonCancel"/>
 
     <Button
         android:id="@+id/signUpSubmitBut"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/signUpP2"
-        android:layout_below="@+id/signUpP2"
-        android:layout_marginTop="15dp"
-        android:text="@string/submitBut" />
-
-
-   
+        style="@style/buttonSubmit"/>
+    </LinearLayout>
 </RelativeLayout>
