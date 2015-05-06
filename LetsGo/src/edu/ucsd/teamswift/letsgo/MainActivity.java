@@ -15,10 +15,7 @@ import android.app.Activity;
 import android.app.DialogFragment;
 import android.content.Intent;
 import android.os.Bundle;
-//import android.util.Log;	// For logcat logging/debugging
-//import android.view.Menu;
-//import android.view.MenuItem;
-import android.view.View;	// For button OnClick event handling
+import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends Activity {
@@ -70,6 +67,11 @@ public class MainActivity extends Activity {
 					
 				//Then moves to Sign Up Page
 				startActivity(moveToSignUpPage);
+				
+				/*
+				Intent testMove = new Intent(MainActivity.this, JoinCategoryPage.class);
+				testMove.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+				startActivity(testMove);*/
 					
 				//Method to apply transition animation between activities
 				//overridePendingTransition(R.animator.transition_to_sign_up_page, R.animator.transition_sign_up_page_2);

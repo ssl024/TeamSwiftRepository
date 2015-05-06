@@ -52,6 +52,7 @@
     <string name="title_activity_my_activities_page">My Activities</string>
     <string name="title_activity_test">Test Activity</string>
     
+    
     <!-- END -->
     
 	<!-- Set TEXT VIEWs -->
@@ -63,6 +64,8 @@
 	<string name="viewNumPeople">Number of People: </string>
 	<string name="viewOtherInfo">Other Information: </string>
     <!-- END -->
+    
+    <string name="categoryName">Test Category Name</string>
     
     
 
