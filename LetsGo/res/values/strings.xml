@@ -23,40 +23,47 @@
     <string name="lastNameHint">Last Name</string>
     <string name="emailHint1">E-mail</string>
     <string name="emailHint2">Re-enter E-mail</string>
-     <string name="passwordHint1">Password</string>
+    <string name="passwordHint1">Password</string>
     <string name="passwordHint2">Re-enter Password</string>
-        
-    <!-- END -->
     
-
+    <!-- END -->
     
     <!-- Buttons -->
     <string name="signUpBut">Sign up</string>
     <string name="logInBut">Log in</string>
     <string name="cancelBut">Cancel</string>
     <string name="submitBut">Submit</string>
-    <string name="letsGoPlayBut">Let\'s Go Play</string>
+    <string name="letsGoPlayBut">Let\'s Go Play!</string>
     <string name="myActivitesBut">My Activities</string>
+    <string name="createBut">Create!</string>
+    <string name="cancelCreateBut">Cancel</string>
     
     <!-- END -->
     
     <!-- Page Titles -->
     <string name="title_activity_sign_in_page">Sign In</string>
     <string name="title_activity_sign_up_page">Sign Up</string>
-    <string name="title_activity_home_page">HomePage</string>
-    <string name="title_activity_create_join_page">CreateJoinPage</string>
-    <string name="title_activity_create_category_page">CreateCategoryPage</string>
-    <string name="title_activity_join_category_page">JoinCategoryPage</string>
-    <string name="title_activity_create_actvity_page">CreateActvityPage</string>
-    <string name="title_activity_join_available_game_page">JoinAvailableGamePage</string>
-    <string name="title_activity_my_activities_page">MyActivitiesPage</string>
-    <string name="title_activity_test">TestActivity</string>
+    <string name="title_activity_home_page">Home</string>
+    <string name="title_activity_create_join_page">Create or Join</string>
+    <string name="title_activity_create_category_page">Create - Catergories</string>
+    <string name="title_activity_join_category_page">Join - Categories</string>
+    <string name="title_activity_create_actvity_page">Create an Actvity</string>
+    <string name="title_activity_join_available_game_page">Join Available Games</string>
+    <string name="title_activity_my_activities_page">My Activities</string>
+    <string name="title_activity_test">Test Activity</string>
     
     <!-- END -->
     
-        
-        
-    <string name="letsGoPlay">Lets Go Play</string>
-    <string name="hello_world">Hello world!</string>
+	<!-- Set TEXT VIEWs -->
+	<string name="viewDate">Stat Date: </string>
+	<string name="viewRepeatDates">Repeats: </string>
+	<string name="viewStartTime">Start Time: </string>
+	<string name="viewEndTime">End Time: </string>
+	<string name="viewLocation">Location: </string>
+	<string name="viewNumPeople">Number of People: </string>
+	<string name="viewOtherInfo">Other Information: </string>
+    <!-- END -->
     
+    
+
 </resources>

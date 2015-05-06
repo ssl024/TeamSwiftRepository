@@ -25,7 +25,8 @@
         <item name="android:text">@string/userEmail</item>        
 	    <item name="android:layout_width">match_parent</item>
 	    <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">#00FF00</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/grey</item>
         <item name="android:typeface">monospace</item>
         <item name="android:layout_marginTop">9dp</item>
         <item name="android:ems">10</item>
@@ -39,6 +40,8 @@
 		    <item name="android:hint">@string/emailHint2</item>
 		</style>
 	
+	<!-- END -->
+	
     <!-- 
     Basic User PASSWORD Input format 
     -->		
@@ -47,7 +50,8 @@
         <item name="android:text">@string/userPassword</item>   
 	    <item name="android:layout_width">match_parent</item>	    
 	    <item name="android:layout_height">wrap_content</item>
-	    <item name="android:textColor">#00FF00</item>
+	    <item name="android:textColor">@color/black</item>
+	    <item name="android:textColorHint">@color/grey</item>
         <item name="android:typeface">monospace</item>
         <item name="android:layout_marginTop">9dp</item>
         <item name="android:ems">10</item>
@@ -80,11 +84,13 @@
 		<style name="lastName" parent="name">
 		   	<item name="android:hint">@string/lastNameHint</item>
     	</style>
+    <!-- END -->
     
     <!-- 
     	BUTTON Linear Layout format: Two BUTTONS on single line
     -->
 	<style name="buttonLL">
+	    <item name="android:textColor">@color/black</item>
 	    <item name="android:layout_width">0dp</item>
 	    <item name="android:layout_height">wrap_content</item>
 	    <item name="android:layout_weight">1</item>
@@ -102,7 +108,37 @@
 		<style name="buttonLogIn" parent="buttonLL">
 		    <item name="android:text">@string/logInBut</item>
 		</style>
+		<style name="buttonCreate" parent="buttonLL" >
+		    <item name="android:text">@string/createBut</item>
+		</style>
+	<!-- END -->
 		
+	<!-- BUTTON Stacked/"normal" layout: Single button per line -->
+	<style name="buttonNorm">
+	    <item name="android:textColor">@color/black</item>
+	    <item name="android:layout_width">fill_parent</item>
+	    <item name="android:layout_height">wrap_content</item>
+	    <item name="android:layout_weight">1</item>
+	</style>
+		<!-- Specific BUTTONS -->
+		
+	<!-- END -->
 	
-		
+	<!-- TEXT VIEW -->
+		<!-- Create an Activity PAGE -->
+		<style name="createViewBasic">
+		    <item name="android:layout_width">120dp</item>
+	   		<item name="android:layout_height">wrap_content</item>
+	   		<item name="android:paddingBottom">12dp</item>
+		</style>
+		<!-- End -->
+	<!-- END -->
+	
+	<!-- INPUT FIELDS -->
+	<style name="inputCreateViewBasic">
+	   	<item name="android:layout_width">fill_parent</item>
+	   	<item name="android:layout_height">wrap_content</item>
+	   	<item name="android:gravity">right</item>
+	</style>
+	<!-- END -->
 </resources>

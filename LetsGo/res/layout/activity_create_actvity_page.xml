@@ -8,4 +8,116 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="edu.ucsd.teamswift.letsgo.CreateActvityPage" >
 
+    <TextView
+        android:id="@+id/viewDate"
+        style="@style/createViewBasic"
+        android:text="@string/viewDate"/>
+    
+    <TextView
+        android:id="@+id/viewRepeatDates"
+        style="@style/createViewBasic"
+        android:text="@string/viewRepeatDates"
+        android:layout_below="@+id/viewDate"/>
+    <TextView
+        android:id="@+id/viewStartTime"
+        style="@style/createViewBasic"
+        android:text="@string/viewStartTime"
+        android:layout_below="@+id/viewRepeatDates"/>
+    
+    <TextView
+        android:id="@+id/viewEndTime"
+        style="@style/createViewBasic"
+        android:text="@string/viewEndTime"
+        android:layout_below="@+id/viewStartTime"/>
+    
+    <TextView
+        android:id="@+id/viewLocation"
+        style="@style/createViewBasic"
+        android:text="@string/viewLocation"
+        android:layout_below="@+id/viewEndTime"/>
+    
+    <TextView
+        android:id="@+id/viewNumPeople"
+        style="@style/createViewBasic"
+        android:text="@string/viewNumPeople"
+        android:layout_below="@+id/viewLocation"/>
+    
+    <TextView
+        android:id="@+id/viewOtherInfo"
+        style="@style/createViewBasic"
+        android:text="@string/viewOtherInfo"
+        android:layout_below="@+id/viewNumPeople"/>
+
+    <EditText
+        android:id="@+id/inputStartDate"
+        style="@style/inputCreateViewBasic"
+        android:layout_alignBaseline="@+id/viewDate"
+        android:layout_toRightOf="@+id/viewDate"
+        android:inputType="date" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/inputRepeatDates"
+        style="@style/inputCreateViewBasic"
+        android:layout_alignBaseline="@+id/viewRepeatDates"
+        android:layout_toRightOf="@+id/viewRepeatDates"
+        android:inputType="date" />
+    
+    <EditText
+        android:id="@+id/inputStartTime"
+        style="@style/inputCreateViewBasic"
+        android:layout_alignBaseline="@+id/viewStartTime"
+        android:layout_toRightOf="@+id/viewStartTime"
+        android:inputType="time" />
+    
+    <EditText
+        android:id="@+id/inputEndTime"
+        style="@style/inputCreateViewBasic"
+        android:layout_alignBaseline="@+id/viewEndTime"
+        android:layout_toRightOf="@+id/viewEndTime"
+        android:inputType="time" />
+    
+    <EditText
+        android:id="@+id/inputLocation"
+        style="@style/inputCreateViewBasic"
+        android:layout_alignBaseline="@+id/viewLocation"
+        android:layout_toRightOf="@+id/viewLocation"
+        android:inputType="time" />
+    
+    <EditText
+        android:id="@+id/inputNumPeople"
+        style="@style/inputCreateViewBasic"
+        android:layout_alignBaseline="@+id/viewNumPeople"
+        android:layout_toRightOf="@+id/viewNumPeople"
+        android:inputType="number"/>
+    
+    <EditText
+        android:id="@+id/inputOtherInfo"
+        style="@style/inputCreateViewBasic"
+        android:layout_alignBaseline="@+id/viewOtherInfo"
+        android:layout_toRightOf="@+id/viewOtherInfo"
+        android:inputType="textMultiLine"/>
+
+    <!-- 
+    	To put multiple buttons on one line unit 
+    -->
+	<LinearLayout 
+	   	android:id="@+id/twoButtonLL"
+      	android:layout_width="match_parent"
+      	android:layout_height="wrap_content"
+      	android:layout_below="@+id/viewOtherInfo"
+      	android:paddingTop= "15dp"
+      	android:paddingBottom= "15dp">
+       
+    <Button
+        android:id="@+id/cancelCreateBut"
+        style="@style/buttonCancel"/>
+     <Button
+        android:id="@+id/createBut"
+        style="@style/buttonCreate"/>
+    
+    </LinearLayout>
+
 </RelativeLayout>
