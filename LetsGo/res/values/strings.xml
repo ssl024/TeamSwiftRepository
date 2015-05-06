@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Lets Go</string>
+    <string name="app_name">Let\'s Go</string>
     <string name="action_settings">Settings</string>
     
     <!-- User Info -->
