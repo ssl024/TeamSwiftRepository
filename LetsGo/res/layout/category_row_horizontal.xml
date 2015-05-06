@@ -10,7 +10,6 @@
         android:layout_height="match_parent"
         android:drawableLeft="@drawable/ic_launcher"
         android:drawablePadding="10dp"
-        android:text="@string/categoryName"
         android:gravity="center_vertical"
         android:textSize="20sp" />
 
