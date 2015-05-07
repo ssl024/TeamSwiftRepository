@@ -33,7 +33,7 @@ public class MainActivity extends Activity {
 
 		//Parse activation
 		// Enable Local Datastore.
-		Parse.enableLocalDatastore(this);
+		//Parse.enableLocalDatastore(this);
 		Parse.initialize(this, "YJAscpzjA1h1RaK87FdRrOy3E9XlTHmE0IYqvOeK", "gTMbs9rNZMbXQXhgl1eLVEFvAPdHUtFPcUo6KTou");	
 
 		//Lets program look for and find the sign up button
