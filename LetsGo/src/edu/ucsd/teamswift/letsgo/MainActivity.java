@@ -11,6 +11,8 @@
 
 package edu.ucsd.teamswift.letsgo;
 
+import com.parse.Parse;
+
 import android.app.Activity;	
 import android.app.DialogFragment;
 import android.content.Intent;
@@ -28,7 +30,12 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		
+
+		//Parse activation
+		// Enable Local Datastore.
+		Parse.enableLocalDatastore(this);
+		Parse.initialize(this, "YJAscpzjA1h1RaK87FdRrOy3E9XlTHmE0IYqvOeK", "gTMbs9rNZMbXQXhgl1eLVEFvAPdHUtFPcUo6KTou");	
+
 		//Lets program look for and find the sign up button
 		forgotPasswordBut = (Button)this.findViewById(R.id.forgotPasswordBut);
 		signUpBut = (Button)this.findViewById(R.id.signUpBut);

@@ -14,7 +14,6 @@ import com.parse.ParseException;
 import com.parse.SignUpCallback;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -119,21 +118,20 @@ public class SignUpPage extends Activity {
 							{
 								/* TODO */
 								//If good pop window of confirmation and then Move to Profile Page
-								Toast.makeText(getApplicationContext(), "Make popup confirm 1", Toast.LENGTH_LONG).show();
+								Toast.makeText(getApplicationContext(), "TEST: user account successful", Toast.LENGTH_LONG).show();
 							}
 							else
 							{
 								/* TODO */
 								//If not good, pop up window why not good and stay on page
-								Toast.makeText(getApplicationContext(), "Make popup confirm 2", Toast.LENGTH_LONG).show();
+								Toast.makeText(getApplicationContext(), "TEST: user account unsuccessful", Toast.LENGTH_LONG).show();
 							}
 						}
 					});
 				
 				}
 				
-				//After move to Sign Up Page, Removes Main Activity Page from stack
-				finish();		
+				//Things to do after the entire on click happen here
 			}
 		});
 	
@@ -146,12 +144,13 @@ public class SignUpPage extends Activity {
 			@Override
 			public void onClick(View v) {
 				
-				Intent moveToMainActivityPage = new Intent(SignUpPage.this, MainActivity.class);
+				/*Intent moveToMainActivityPage = new Intent(SignUpPage.this, MainActivity.class);
 		
 				//Clears all other activities including this one when returning to the Main Activity
 				moveToMainActivityPage.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 				
-				startActivity(moveToMainActivityPage);
+				startActivity(moveToMainActivityPage);*/
+				finish();
 			}
 		});
 	}
