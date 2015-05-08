@@ -15,7 +15,7 @@ public class MyActivitiesPage extends Activity {
 	Button EditActivityBut;
 	Button MoreActivityInfoBut;
 	Button LeaveActivityBut;
-
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

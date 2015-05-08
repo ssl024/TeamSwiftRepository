@@ -42,6 +42,7 @@
     <string name="EditActivityBut">Edit</string>
     <string name="MoreActivityInfoBut">More Info</string>
     <string name="LeaveActivityBut">Leave</string>
+
     
     
     <!-- END -->
@@ -69,8 +70,6 @@
 	<string name="viewLocation">Location: </string>
 	<string name="viewNumPeople">Number of People: </string>
 	<string name="viewOtherInfo">Other Information: </string>
-	<string name="userId">User Id: </string>
-	
     <!-- END -->
     
     <string name="categoryName">Test Category Name</string>

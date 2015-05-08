@@ -8,8 +8,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="edu.ucsd.teamswift.letsgo.HomePage" >
 
-    
-     
     <Button
         android:id="@+id/letsGoPlayBut"
         android:text="@string/letsGoPlayBut"
@@ -25,21 +23,4 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/letsGoPlayBut"
         android:layout_centerHorizontal="true"/>
-    
-     <Button
-        android:id="@+id/logOutBut"
-        android:text="@string/logOutBut"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/myActivitiesBut"
-        android:layout_centerVertical="true"/>
-     
-      <TextView
-        android:id="@+id/userId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/logOutBut"
-        android:layout_centerHorizontal="true" />
-
 </RelativeLayout>
