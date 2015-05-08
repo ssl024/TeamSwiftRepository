@@ -47,7 +47,10 @@ public class MainActivity extends Activity {
 		//Parse activation
 		// Enable Local Datastore.
 		//Parse.enableLocalDatastore(this);
-		Parse.initialize(this, "YJAscpzjA1h1RaK87FdRrOy3E9XlTHmE0IYqvOeK", "gTMbs9rNZMbXQXhgl1eLVEFvAPdHUtFPcUo6KTou");
+		// Swift keys 
+		Parse.initialize(this, "hB3eXHmQndkVq2f3Ir1I4G2WKW8va1p10ZUmi3iw", "uhv7L1VPCLM5xYdvEXHwb1tMJ1hCrYLkftaYUFeK");
+		//old keys
+		//Parse.initialize(this, "YJAscpzjA1h1RaK87FdRrOy3E9XlTHmE0IYqvOeK", "gTMbs9rNZMbXQXhgl1eLVEFvAPdHUtFPcUo6KTou");
 
 		//Lets program look for and find the sign up button
 		forgotPasswordBut = (Button)this.findViewById(R.id.forgotPasswordBut);
