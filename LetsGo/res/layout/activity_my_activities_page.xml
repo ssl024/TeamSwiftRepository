@@ -1,4 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    
+    
+    
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,5 +10,39 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="edu.ucsd.teamswift.letsgo.MyActivitiesPage" >
+ 
+ <Button
+        android:id="@+id/moreInfoBut"
+        android:text="@string/moreInfoBut"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
+  <Button
+        android:id="@+id/editActivityBut"
+        android:text="@string/editActivityBut"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/moreInfoBut"
+        android:layout_centerVertical="true"/>	
+
+  <Button
+        android:id="@+id/deleteActivityBut"
+        android:text="@string/deleteActivityBut"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editActivityBut"
+        android:layout_centerVertical="true"/>
+  <Button
+        android:id="@+id/leaveActivityBut"
+        android:text="@string/leaveActivityBut"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/deleteActivityBut"
+        android:layout_centerVertical="true"/>
+
+
+
 
 </RelativeLayout>

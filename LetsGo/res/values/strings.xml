@@ -37,6 +37,11 @@
     <string name="myActivitesBut">My Activities</string>
     <string name="createBut">Create!</string>
     <string name="cancelCreateBut">Cancel</string>
+    <string name="moreInfoBut">More Info</string>
+    <string name="editActivityBut">Edit</string>
+    <string name="deleteActivityBut">Delete</string>
+    <string name="leaveActivityBut">Leave-Please Don't Go</string>
+    
     
     <!-- END -->
     
