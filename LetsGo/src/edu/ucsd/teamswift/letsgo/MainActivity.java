@@ -12,6 +12,10 @@
 package edu.ucsd.teamswift.letsgo;
 
 import com.parse.Parse;
+import com.parse.ParseUser;
+import com.parse.LogInCallback;
+import com.parse.ParseException;
+
 
 import android.app.Activity;	
 import android.app.DialogFragment;
@@ -19,12 +23,21 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
+	
 	Button forgotPasswordBut;
 	Button signUpBut;
 	Button logInBut;
+	
+	String emailString;
+	String passwordStirng;
+	EditText passwordEditText;
+	EditText emailEditText;
+	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -34,12 +47,15 @@ public class MainActivity extends Activity {
 		//Parse activation
 		// Enable Local Datastore.
 		//Parse.enableLocalDatastore(this);
-		Parse.initialize(this, "YJAscpzjA1h1RaK87FdRrOy3E9XlTHmE0IYqvOeK", "gTMbs9rNZMbXQXhgl1eLVEFvAPdHUtFPcUo6KTou");	
+		Parse.initialize(this, "YJAscpzjA1h1RaK87FdRrOy3E9XlTHmE0IYqvOeK", "gTMbs9rNZMbXQXhgl1eLVEFvAPdHUtFPcUo6KTou");
 
 		//Lets program look for and find the sign up button
 		forgotPasswordBut = (Button)this.findViewById(R.id.forgotPasswordBut);
 		signUpBut = (Button)this.findViewById(R.id.signUpBut);
 		logInBut = (Button)this.findViewById(R.id.logInBut);
+		emailEditText = (EditText) findViewById(R.id.userEmail);
+		passwordEditText = (EditText) findViewById(R.id.userPassword);
+		
 	
 		/*
 		 * Forgot Password Button
@@ -96,16 +112,26 @@ public class MainActivity extends Activity {
 				
 				/*TODO*/
 				//Before transition, check if Login Credential are good on parse carry token 
+				// getText from the login page and store it in strings
+				emailString = emailEditText.getText().toString();
+				passwordStirng = passwordEditText.getText().toString();
 				
-				//Intent will allow user to transition to Home Screen
-				Intent moveToHome = new Intent(MainActivity.this, HomePage.class);
-		
-				//Makes it so the Home Page is a unique task
-				moveToHome.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-			
-				//The moves to the Home Page
-				startActivity(moveToHome);
+				// Send data to parse for verification
+				ParseUser.logInInBackground(emailString, passwordStirng, new LogInCallback() {
+					public void done(ParseUser user, ParseException e) {
+						if (user != null) {
+							// if the user exist and authenticated, send user to home screen
+							Intent intent = new Intent(MainActivity.this, HomePage.class);
+							startActivity(intent);
+							Toast.makeText(getApplicationContext(),"Successfully Logged in", Toast.LENGTH_LONG).show();
+							finish();
+						} else {
+							Toast.makeText(getApplicationContext(), "No Such user exist, please sign up", Toast.LENGTH_LONG).show();
+						}
+					}
 				
+				});
+						
 			}
 		});
 		
