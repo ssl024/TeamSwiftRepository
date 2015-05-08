@@ -8,4 +8,34 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="edu.ucsd.teamswift.letsgo.MyActivitiesPage" >
 
+        <Button
+        android:id="@+id/DeleteActivityBut"
+        android:text="@string/DeleteActivityBut"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
+    <Button
+        android:id="@+id/EditActivityBut"
+        android:text="@string/EditActivityBut" 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/DeleteActivityBut"
+        android:layout_centerHorizontal="true"/>
+    <Button
+        android:id="@+id/MoreActivityInfoBut"
+        android:text="@string/MoreActivityInfoBut" 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/EditActivityBut"
+        android:layout_centerHorizontal="true"/>
+    <Button
+        android:id="@+id/LeaveActivityBut"
+        android:text="@string/LeaveActivityBut" 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/MoreActivityInfoBut"
+        android:layout_centerHorizontal="true"/>
+    
 </RelativeLayout>
