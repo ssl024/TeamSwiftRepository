@@ -14,6 +14,7 @@ import com.parse.ParseException;
 import com.parse.SignUpCallback;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -119,6 +120,7 @@ public class SignUpPage extends Activity {
 								/* TODO */
 								//If good pop window of confirmation and then Move to Profile Page
 								Toast.makeText(getApplicationContext(), "TEST: user account successful", Toast.LENGTH_LONG).show();
+								finish();
 							}
 							else
 							{
@@ -150,6 +152,7 @@ public class SignUpPage extends Activity {
 				moveToMainActivityPage.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 				
 				startActivity(moveToMainActivityPage);*/
+				
 				finish();
 			}
 		});

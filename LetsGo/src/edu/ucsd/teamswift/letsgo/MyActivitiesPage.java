@@ -4,9 +4,18 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 
 public class MyActivitiesPage extends Activity {
 
+	
+	//Local variable
+	
+	Button DeleteActivityBut;
+	Button EditActivityBut;
+	Button MoreActivityInfoBut;
+	Button LeaveActivityBut;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
