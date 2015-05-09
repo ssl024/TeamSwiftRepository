@@ -5,47 +5,28 @@
  */
 package edu.ucsd.teamswift.letsgo;
 
-import android.graphics.drawable.Drawable;
+import com.parse.ParseClassName;
+import com.parse.ParseObject;
 
-public class Category implements Comparable<Category> {
+@ParseClassName(value = "Category")
+public class Category extends ParseObject {
 	
-	//The image icon of the category (Basketball icon)
-	Drawable categoryIcon;
-	
-	String categoryName;
-
 	/*
 	 * Category constructor
 	 */
-	public Category(String categoryName)
-	{
-		this.categoryName = categoryName;
-	}
+	public Category() {}
 
-	public void setCategoryIcon(Drawable categoryIcon)
+	//get and set CategoryName
+	public String getCategoryName()
 	{
-		this.categoryIcon = categoryIcon;
-	}
-	
-	public Drawable getCategoryIcon()
-	{
-		return categoryIcon;
+		return getString("Name");
 	}
 	
 	public void setCategoryName(String categoryName)
 	{
-		this.categoryName = categoryName;
+		put("Name", categoryName);
 	}
 	
-	public String getCategoryName()
-	{
-		return categoryName;
-	}
-
-	@Override
-	public int compareTo(Category other)
-	{
-		return categoryName.compareTo(other.getCategoryName());
-	}
-
+	//get and set CategoryIcon
+	/* TODO */
 }

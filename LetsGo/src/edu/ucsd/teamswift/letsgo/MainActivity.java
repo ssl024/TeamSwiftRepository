@@ -12,6 +12,7 @@
 package edu.ucsd.teamswift.letsgo;
 
 import com.parse.Parse;
+import com.parse.ParseObject;
 
 import android.app.Activity;	
 import android.app.DialogFragment;
@@ -33,8 +34,11 @@ public class MainActivity extends Activity {
 
 		//Parse activation
 		// Enable Local Datastore.
-		Parse.enableLocalDatastore(this);
-		Parse.initialize(this, "YJAscpzjA1h1RaK87FdRrOy3E9XlTHmE0IYqvOeK", "gTMbs9rNZMbXQXhgl1eLVEFvAPdHUtFPcUo6KTou");	
+		//Parse.enableLocalDatastore(this);
+		//Register all ParseObject subclasses here:
+		ParseObject.registerSubclass(Category.class);
+		
+		Parse.initialize(this, "hB3eXHmQndkVq2f3Ir1I4G2WKW8va1p10ZUmi3iw", "uhv7L1VPCLM5xYdvEXHwb1tMJ1hCrYLkftaYUFeK");	
 
 		//Lets program look for and find the sign up button
 		forgotPasswordBut = (Button)this.findViewById(R.id.forgotPasswordBut);
@@ -66,19 +70,19 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 			
-				//Intent will allow user to transition to sign up page
+				/*//Intent will allow user to transition to sign up page
 				Intent moveToSignUpPage = new Intent(MainActivity.this, SignUpPage.class);
 				
 				//Makes it so the sign up page is a unique task
 				moveToSignUpPage.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 					
 				//Then moves to Sign Up Page
-				startActivity(moveToSignUpPage);
+				startActivity(moveToSignUpPage);*/
 				
-				/*
+				
 				Intent testMove = new Intent(MainActivity.this, JoinCategoryPage.class);
 				testMove.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-				startActivity(testMove);*/
+				startActivity(testMove);
 					
 				//Method to apply transition animation between activities
 				//overridePendingTransition(R.animator.transition_to_sign_up_page, R.animator.transition_sign_up_page_2);

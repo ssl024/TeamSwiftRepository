@@ -8,6 +8,8 @@
  */
 package edu.ucsd.teamswift.letsgo;
 
+import java.util.List;
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,7 +19,7 @@ import android.widget.TextView;
 
 public class CategoryAdapter extends ArrayAdapter<Category> {
 
-	public CategoryAdapter(Context context, Category[] values) {
+	public CategoryAdapter(Context context, List<Category> values) {
 		super(context, R.layout.category_row_horizontal, values);
 		// TODO Auto-generated constructor stub
 	}
@@ -39,8 +41,9 @@ public class CategoryAdapter extends ArrayAdapter<Category> {
 			convertView = theInflater.inflate(R.layout.category_row_horizontal, parent, false);
 		}
 
-		//Get one of the items from the array and extract it's name to fill the TextView with
-		String categoryName = getItem(position).getCategoryName();
+		//Get one of the items from the array and grab its name to fill the textview
+		Category currentCategory = (Category)getItem(position);
+		String categoryName = currentCategory.getCategoryName();
 	
 		/*TODO*/
 		//Drawable categoryIcon = getItem(position).getCategoryIcon();
