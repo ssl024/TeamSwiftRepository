@@ -61,10 +61,7 @@
             android:name=".MyActivitiesPage"
             android:label="@string/title_activity_my_activities_page" >
         </activity>
-        <activity
-            android:name=".MyProfilePage"
-            android:label="@string/title_activity_my_profile_page" >
-        </activity>
+
     </application>
 
 </manifest>
