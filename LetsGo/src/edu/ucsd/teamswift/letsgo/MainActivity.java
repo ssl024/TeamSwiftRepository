@@ -1,4 +1,4 @@
-/* Project: Lets Go
+/* Project: Lets Go	
  * Group: Team Swift
  * Description: Opening Page of "Lets Go" Android Application. Allows user to
  * 			    sign up or sign in to application
@@ -16,15 +16,16 @@ import com.parse.ParseObject;
 import com.parse.ParseUser;
 import com.parse.LogInCallback;
 import com.parse.ParseException;
-
+// by noor
+import edu.ucsd.teamswift.letsgo.DialogPopUp;
 import android.app.Activity;	
-import android.app.DialogFragment;
+// Added by noor
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
@@ -38,6 +39,9 @@ public class MainActivity extends Activity {
 	EditText passwordEditText;
 	EditText emailEditText;
 	
+	
+	// PageContext is a variable to hold the page name to pass it to DialogPopUp()
+	Context pageContext = MainActivity.this;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -116,6 +120,7 @@ public class MainActivity extends Activity {
 		 * Logic that handles the log in and transitions to the Home Page
 		 */
 		logInBut.setOnClickListener(new View.OnClickListener() {
+					
 			@Override
 			public void onClick(View v) {
 				
@@ -124,7 +129,7 @@ public class MainActivity extends Activity {
 				// getText from the login page and store it in strings
 				emailString = emailEditText.getText().toString();
 				passwordStirng = passwordEditText.getText().toString();
-				
+
 				// Send data to parse for verification
 				ParseUser.logInInBackground(emailString, passwordStirng, new LogInCallback() {
 					public void done(ParseUser user, ParseException e) {
@@ -132,10 +137,23 @@ public class MainActivity extends Activity {
 							// if the user exist and authenticated, send user to home screen
 							Intent intent = new Intent(MainActivity.this, HomePage.class);
 							startActivity(intent);
-							Toast.makeText(getApplicationContext(),"Successfully Logged in", Toast.LENGTH_LONG).show();
 							finish();
 						} else {
-							Toast.makeText(getApplicationContext(), "No Such user exist, please sign up", Toast.LENGTH_LONG).show();
+							//Break this "if" statement to give pop up for each individual error in field
+							if (emailString.equals("") || passwordStirng.equals("")) {
+								
+								/* Pop up menu to tell user to complete form */
+								// Call DialogPopUp("title", "msg", "context")
+								DialogPopUp.DialogPop("There was a problem", "Please fill the blank fields", pageContext);
+								
+							}
+							
+							else {
+								/* Pop up menu to tell user to complete form */
+								// Call DialogPopUp("title", "msg", "context")
+								DialogPopUp.DialogPop("There was a problem", "No Such user exist, please sign up", pageContext);
+							
+							}
 						}
 					}
 				

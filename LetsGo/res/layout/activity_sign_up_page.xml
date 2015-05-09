@@ -46,7 +46,7 @@
     	To put multiple buttons on one line unit 
     -->
 	<LinearLayout 
-	   	android:id="@+id/twoButtonLL"
+	   	android:id="@+id/linearSignUpButts"
       	android:layout_width="match_parent"
       	android:layout_height="wrap_content"
       	android:layout_below="@+id/signUpP2"

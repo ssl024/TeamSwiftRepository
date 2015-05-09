@@ -10,32 +10,20 @@
 
     <Button
         android:id="@+id/letsGoPlayBut"
-        android:text="@string/letsGoPlayBut"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"/>
+        style="@style/buttonLetsGoPlay"/>
 
     <Button
         android:id="@+id/myActivitiesBut"
-        android:text="@string/myActivitesBut" 
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/letsGoPlayBut"
-        android:layout_centerHorizontal="true"/>
-      <Button
+        style="@style/buttonMyActivities"/>
+     
+     <Button
         android:id="@+id/logOutBut"
-        android:text="@string/logOutBut"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/myActivitiesBut"
-        android:layout_centerVertical="true"/>
+        style="@style/buttonLogOut"/>
      
       <TextView
         android:id="@+id/userId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/logOutBut"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/logOutBut"/>
 </RelativeLayout>

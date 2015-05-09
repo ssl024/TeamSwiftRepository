@@ -14,28 +14,28 @@ import com.parse.ParseException;
 import com.parse.SignUpCallback;
 
 import android.app.Activity;
-import android.content.Intent;
+import android.content.Context;
 import android.os.Bundle;
-import android.util.Log;
+//import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import edu.ucsd.teamswift.letsgo.DialogPopUp;
 
 public class SignUpPage extends Activity {
 
-	private EditText emailEditText;
-	private EditText reEmailEditText;
-	private EditText passwordEditText;
-	private EditText rePasswordEditText;
-	private Button submitButton;
-	private Button cancelButton;
-	private String emailString;
-	private String reEmailString;
-	private String passwordString;
-	private String rePasswordString;
+	// Declare Variables 
+	private EditText firstNameEditText, lastNameEditText, emailEditText, reEmailEditText,
+					 	passwordEditText, rePasswordEditText;
+	private String firstNameString, lastNameString, emailString,
+				   		reEmailString, passwordString, rePasswordString;
+	private Button submitButton,  cancelButton;
+	
+	// PageContext is a variable to hold the page name to pass it to DialogPopUp()
+	private Context pageContext = SignUpPage.this;;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +43,8 @@ public class SignUpPage extends Activity {
 		setContentView(R.layout.activity_sign_up_page);
 		
 		/* Find the objects in the view */
+		firstNameEditText = (EditText)findViewById(R.id.firstName);
+		lastNameEditText = (EditText)findViewById(R.id.lastName);
 		emailEditText = (EditText)findViewById(R.id.signUpE1);
 		reEmailEditText = (EditText)findViewById(R.id.signUpE2);
 		passwordEditText = (EditText)findViewById(R.id.signUpP1);
@@ -68,6 +70,8 @@ public class SignUpPage extends Activity {
 		submitButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
+				firstNameString = firstNameEditText.getText().toString();
+				lastNameString = lastNameEditText.getText().toString();
 				emailString = emailEditText.getText().toString();
 				reEmailString = reEmailEditText.getText().toString();
 				passwordString = passwordEditText.getText().toString();
@@ -76,28 +80,28 @@ public class SignUpPage extends Activity {
 				/* TODO */
 				//Break this "if" statement to give pop up for each individual error in field
 				if (emailString.equals("") || reEmailString.equals("") 
-						|| passwordString.equals("") || rePasswordString.equals(""))
+						|| passwordString.equals("") || rePasswordString.equals("") 
+						|| firstNameString.equals("") || lastNameString.equals(""))
 				{
-					/* TODO */
-					Log.e("FieldForms", "FIELDS ARE EMPTY");
-					/* Tell user to complete form */
-					/* Pop up menu */
+					/* Pop up menu to tell user to complete form */
+					// Call DialogPopUp("title", "msg", "context")
+					DialogPopUp.DialogPop("There was a problem", "Please fill the blank fields", pageContext);
+										
 				}
 				/* Check if emails are the same */
 				else if (!emailString.equals(reEmailString))
 				{
-					/* TODO */
-					Log.e("FieldForms", "EMAIL DOESNT MATCH");
-					/* Tell user that emails are not the same */
-					/* Pop up menu */
+					/* Pop up menu to Tell user that emails are not the same*/
+					// Call DialogPopUp("title", "msg", "context")
+					DialogPopUp.DialogPop("There was a problem", "Your emails do not match, please try again", pageContext);
+					
 				}
 				/* Check if passwords are the same */
 				else if (!passwordString.equals(rePasswordString))
 				{
-					/* TODO */
-					Log.e("FieldForms", "PASSWORD DOESNT MATCH");
-					/* Tell user that passwords are not the same */
-					/* Pop up menu */
+					/* Pop up menu to Tell user that passwords are not the same*/
+					// Call DialogPopUp("title", "msg", "context")
+					DialogPopUp.DialogPop("There was a problem", "Your passwords do not match, please try again", pageContext);
 				}
 				
 				/* All checks are good */
@@ -112,6 +116,10 @@ public class SignUpPage extends Activity {
 					user.setPassword(passwordString);
 					user.setEmail(emailString);
 					
+					// Add the user's 1st and last name to parse
+					user.put("firstName", firstNameString);
+					user.put("lastName", lastNameString);
+
 					user.signUpInBackground(new SignUpCallback() {
 						public void done(ParseException exception)
 						{
@@ -137,6 +145,9 @@ public class SignUpPage extends Activity {
 			}
 		});
 	
+		
+		
+		
 		/*
 		 * Cancel Button
 		 * 
@@ -157,7 +168,6 @@ public class SignUpPage extends Activity {
 			}
 		});
 	}
-	
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
