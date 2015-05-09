@@ -1,4 +1,4 @@
-/* Project: Lets Go
+/* Project: Lets Go	
  * Group: Team Swift
  * Description: Opening Page of "Lets Go" Android Application. Allows user to
  * 			    sign up or sign in to application

@@ -1,8 +1,12 @@
 package edu.ucsd.teamswift.letsgo;
 
-import com.parse.ParseUser;
+import java.util.ArrayList;
+
+import com.parse.ParseUser;	
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -46,7 +50,33 @@ public class HomePage extends Activity {
 			/*TODO*/
 				//Eric link to Join and Create
 			// POP out Menu to chose between Create Game or Join Game
+				//final ArrayList mSelectedItems = new ArrayList();
+				String[] displayItems = {"Create", "Join"};
+				AlertDialog.Builder builder = new AlertDialog.Builder(HomePage.this);
+				builder.setTitle("Create Or Join an Activity");
+				builder.setItems(displayItems, new DialogInterface.OnClickListener()
+				{
+					public void onClick(DialogInterface dialog, int which) 
+					{
+						switch (which)
+						{
+						case 0:
+						{
+							//go to Create Activity
+							Intent moveToCreateActivities = new Intent(HomePage.this, CreateCategoryPage.class);
+							startActivity(moveToCreateActivities);
+						}
+						case 1:
+						{
+							//go to join activity 
+							Intent moveToJoinActivities = new Intent(HomePage.this, JoinCategoryPage.class);
+							startActivity(moveToJoinActivities);
+						}
 
+						}	
+					}
+		        });
+				builder.show();
 			}
 		});
 				
