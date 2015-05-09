@@ -51,6 +51,7 @@ public class ForgotPasswordDialog extends DialogFragment {
                    ForgotPasswordDialog.this.getDialog().cancel();
                }
            }); 
+
 		return builder.create();
 	}
 }

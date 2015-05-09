@@ -55,9 +55,19 @@ public class MainActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				DialogFragment dialogPopup = new ForgotPasswordDialog();
 				
-				dialogPopup.show(getFragmentManager(), "ForgotPasswordDialogTag");
+				/* TODO
+				 * Warning: Forgot password is being used as a temporary link to the
+				 * JoinCategoryPage.java
+				 * 
+				 */
+				/*DialogFragment dialogPopup = new ForgotPasswordDialog();
+				
+				dialogPopup.show(getFragmentManager(), "ForgotPasswordDialogTag");*/
+				
+				Intent testMove = new Intent(MainActivity.this, JoinCategoryPage.class);
+				testMove.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+				startActivity(testMove);
 			}
 		});
 			
@@ -70,20 +80,15 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 			
-				/*//Intent will allow user to transition to sign up page
+				//Intent will allow user to transition to sign up page
 				Intent moveToSignUpPage = new Intent(MainActivity.this, SignUpPage.class);
 				
 				//Makes it so the sign up page is a unique task
 				moveToSignUpPage.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 					
 				//Then moves to Sign Up Page
-				startActivity(moveToSignUpPage);*/
+				startActivity(moveToSignUpPage);
 				
-				
-				Intent testMove = new Intent(MainActivity.this, JoinCategoryPage.class);
-				testMove.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-				startActivity(testMove);
-					
 				//Method to apply transition animation between activities
 				//overridePendingTransition(R.animator.transition_to_sign_up_page, R.animator.transition_sign_up_page_2);
 			}
@@ -112,10 +117,6 @@ public class MainActivity extends Activity {
 				
 			}
 		});
-		
-		/*TODO*/
-	    //System to handle click on forgot password
-		
 	}
 
 	
