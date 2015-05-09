@@ -26,8 +26,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SignInPage"
-            android:label="@string/title_activity_sign_in_page" >
+            android:name=".LogInPage"
+            android:label="@string/title_activity_log_in_page" >
         </activity>
         <activity
             android:name=".SignUpPage"

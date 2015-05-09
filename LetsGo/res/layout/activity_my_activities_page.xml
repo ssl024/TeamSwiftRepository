@@ -1,7 +1,5 @@
+<!-- TODO: Fix font size, relative button size. -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    
-    
-    
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,37 +8,57 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="edu.ucsd.teamswift.letsgo.MyActivitiesPage" >
-
-
+ 	 <!-- 
+    	To put multiple buttons on one line unit 
+    -->
+	<LinearLayout 
+	   	android:id="@+id/linearMyActButts"
+      	android:layout_width="match_parent"
+      	android:layout_height="wrap_content"
+      	android:paddingTop= "15dp"
+      	android:paddingBottom= "15dp">
+        
+    <Button
+        android:id="@+id/deleteActivityBut"
+        style="@style/buttonDeleteAct"/>
 
     <Button
-        android:id="@+id/DeleteActivityBut"
-        android:text="@string/DeleteActivityBut"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"/>
-
-    <Button
-        android:id="@+id/EditActivityBut"
-        android:text="@string/EditActivityBut" 
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/DeleteActivityBut"
-        android:layout_centerHorizontal="true"/>
-    <Button
-        android:id="@+id/MoreActivityInfoBut"
-        android:text="@string/MoreActivityInfoBut" 
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/EditActivityBut"
-        android:layout_centerHorizontal="true"/>
-    <Button
-        android:id="@+id/LeaveActivityBut"
-        android:text="@string/LeaveActivityBut" 
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/MoreActivityInfoBut"
-        android:layout_centerHorizontal="true"/>
+        android:id="@+id/editActivityBut"
+        style="@style/buttonEditAct"/>
     
+    <Button
+        android:id="@+id/moreActivityBut"
+        style="@style/buttonMoreAct"/>
+    <Button
+        android:id="@+id/leaveActivityBut"
+        style="@style/buttonLeaveAct"/>
+    </LinearLayout>
+    
+	<!--
+    <Button
+        android:id="@+id/deleteActivityBut"
+        style="@style/buttonDeleteAct"/>
+
+    <Button
+        android:id="@+id/editActivityBut"
+        android:text="@string/editActivityBut" 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/deleteActivityBut"
+        android:layout_centerHorizontal="true"/>
+    <Button
+        android:id="@+id/moreActivityInfoBut"
+        android:text="@string/moreActivityInfoBut" 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editActivityBut"
+        android:layout_centerHorizontal="true"/>
+    <Button
+        android:id="@+id/leaveActivityBut"
+        android:text="@string/leaveActivityBut" 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/moreActivityInfoBut"
+        android:layout_centerHorizontal="true"/>
+      -->
 </RelativeLayout>
