@@ -3,21 +3,22 @@
 
     <string name="app_name">Let\'s Go</string>
     <string name="action_settings">Settings</string>
-    
+
     <!-- User Info -->
     <string name="userEmail"></string>
     <string name="userPassword"></string>
     <string name="forgotPassword">Forgot Password?</string>
     <string name="signUpName"></string>
     <string name="firstName">First Name</string>
-    <string name="lastName">Last Name</string>  
+    <string name="lastName">Last Name</string>
     <string name="signUpEmail"></string>
     <string name="signUpEmail2"></string>
     <string name="signUpPassword1"></string>
     <string name="signUpPassword2"></string>
-        
+
     <!-- END -->
-    
+
+
     <!-- Hints -->
     <string name="firstNameHint">First Name</string>
     <string name="lastNameHint">Last Name</string>
@@ -25,9 +26,10 @@
     <string name="emailHint2">Re-enter E-mail</string>
     <string name="passwordHint1">Password</string>
     <string name="passwordHint2">Re-enter Password</string>
-    
+
     <!-- END -->
-    
+
+
     <!-- Buttons -->
     <string name="signUpBut">Sign up</string>
     <string name="logInBut">Log in</string>
@@ -43,10 +45,9 @@
     <string name="MoreActivityInfoBut">More Info</string>
     <string name="LeaveActivityBut">Leave</string>
 
-    
-    
     <!-- END -->
-    
+
+
     <!-- Page Titles -->
     <string name="title_activity_sign_in_page">Sign In</string>
     <string name="title_activity_sign_up_page">Sign Up</string>
@@ -58,22 +59,22 @@
     <string name="title_activity_join_available_game_page">Join Available Games</string>
     <string name="title_activity_my_activities_page">My Activities</string>
     <string name="title_activity_test">Test Activity</string>
-    
-    
+
     <!-- END -->
-    
-	<!-- Set TEXT VIEWs -->
-	<string name="viewDate">Stat Date: </string>
-	<string name="viewRepeatDates">Repeats: </string>
-	<string name="viewStartTime">Start Time: </string>
-	<string name="viewEndTime">End Time: </string>
-	<string name="viewLocation">Location: </string>
-	<string name="viewNumPeople">Number of People: </string>
-	<string name="viewOtherInfo">Other Information: </string>
+
+
+    <!-- Set TEXT VIEWs -->
+    <string name="viewDate">Stat Date: </string>
+    <string name="viewRepeatDates">Repeats: </string>
+    <string name="viewStartTime">Start Time: </string>
+    <string name="viewEndTime">End Time: </string>
+    <string name="viewLocation">Location: </string>
+    <string name="viewNumPeople">Number of People: </string>
+    <string name="viewOtherInfo">Other Information: </string>
     <!-- END -->
-    
+
     <string name="categoryName">Test Category Name</string>
-    
-    
+    <string name="title_activity_my_profile_page">MyProfilePage</string>
+    <string name="hello_world">Hello world!</string>
 
 </resources>
