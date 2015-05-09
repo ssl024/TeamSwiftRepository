@@ -65,12 +65,14 @@ public class HomePage extends Activity {
 							//go to Create Activity
 							Intent moveToCreateActivities = new Intent(HomePage.this, CreateCategoryPage.class);
 							startActivity(moveToCreateActivities);
+							finish();
 						}
 						case 1:
 						{
 							//go to join activity 
 							Intent moveToJoinActivities = new Intent(HomePage.this, JoinCategoryPage.class);
 							startActivity(moveToJoinActivities);
+							finish();
 						}
 
 						}	
