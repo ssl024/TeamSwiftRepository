@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!--
         Base application theme, dependent on API level. This theme is replaced
@@ -111,19 +111,25 @@
 		<style name="buttonCreate" parent="buttonLL" >
 		    <item name="android:text">@string/createBut</item>
 		</style>
-		<!-- My Activities Page -->
-		<style name="buttonDeleteAct" parent="buttonLL">
-		    <item name="android:text">@string/deleteActivityBut</item>
+		<!-- SMALLER BUTTONS: My Activities Page -->
+		<style name="buttonMyActPage" parent="buttonLL">
+		    <item name="android:textSize">15sp</item>
 		</style>
-		<style name="buttonEditAct" parent="buttonLL">
+		<style name="buttonDeleteAct" parent="buttonMyActPage">
+		    <item name="android:text">@string/deleteActivityBut</item>
+		    
+		</style>
+		<style name="buttonEditAct" parent="buttonMyActPage">
 		    <item name="android:text">@string/editActivityBut</item>
 		</style>
-		<style name="buttonMoreAct" parent="buttonLL">
+		<style name="buttonMoreAct" parent="buttonMyActPage">
 		    <item name="android:text">@string/moreActivityInfoBut</item>
 		</style>
-		<style name="buttonLeaveAct" parent="buttonLL">
+		<style name="buttonLeaveAct" parent="buttonMyActPage">
 		    <item name="android:text">@string/leaveActivityBut</item>
 		</style>
+		<!-- END -->
+		
 	<!-- END -->
 		
 	<!-- BUTTON Stacked/"normal" layout: Single button per line -->
@@ -135,7 +141,18 @@
 	    <item name="android:layout_centerVertical">true</item>
 	</style>
 		<!-- Specific BUTTONS -->
-		
+		<style name="buttonLetsGoPlay" parent="buttonNorm">
+		    <item name="android:text">@string/letsGoPlayBut</item>
+		</style>
+		<style name="buttonMyActivities" parent="buttonNorm">
+		    <item name="android:text">@string/myActivitiesBut</item>
+		    <item name="android:layout_below">@+id/letsGoPlayBut</item>		    
+		</style>
+		<style name="buttonLogOut" parent="buttonNorm">
+		    <item name="android:text">@string/logOutBut</item>
+		    <item name="android:layout_alignParentBottom">true</item>
+		    <item name="android:background">@color/red_500</item>
+		</style>
 	<!-- END -->
 	
 	<!-- TEXT VIEW -->
