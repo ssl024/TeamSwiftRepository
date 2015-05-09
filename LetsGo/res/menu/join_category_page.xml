@@ -2,10 +2,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="edu.ucsd.teamswift.letsgo.JoinCategoryPage" >
 
+    <item 
+        android:id="@+id/action_home" 
+        android:title="@string/action_home" />
+	<item 
+        android:id="@+id/action_my_profile" 
+        android:title="@string/action_my_profile" />
+	
+    <item 
+        android:id="@+id/action_my_activities" 
+        android:title="@string/action_my_activities" />
+    
     <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
         android:showAsAction="never"
         android:title="@string/action_settings"/>
+    <item 
+        android:id="@+id/action_sign_out" 
+        android:title="@string/action_sign_out" />
 
 </menu>

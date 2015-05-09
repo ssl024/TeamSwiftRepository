@@ -2,7 +2,6 @@
 <resources>
 
     <string name="app_name">Let\'s Go</string>
-    <string name="action_settings">Settings</string>
     
     <!-- User Info -->
     <string name="userEmail"></string>
@@ -38,13 +37,10 @@
     <string name="createBut">Create!</string>
     <string name="cancelCreateBut">Cancel</string>
     <string name="logOutBut">Log out</string>
-    <string name="DeleteActivityBut">Delete</string>
-    <string name="EditActivityBut">Edit</string>
-    <string name="MoreActivityInfoBut">More Info</string>
-    <string name="LeaveActivityBut">Leave</string>
-
-    
-    
+    <string name="deleteActivityBut">Delete</string>
+    <string name="editActivityBut">Edit</string>
+    <string name="moreActivityInfoBut">More Info</string>
+    <string name="leaveActivityBut">Leave</string>
     <!-- END -->
     
     <!-- Page Titles -->
@@ -58,10 +54,16 @@
     <string name="title_activity_join_available_game_page">Join Available Games</string>
     <string name="title_activity_my_activities_page">My Activities</string>
     <string name="title_activity_test">Test Activity</string>
-    
-    
     <!-- END -->
     
+    <!-- Settings options -->
+    <string name="action_home">Home</string>
+    <string name="action_my_profile">My Profile</string>
+    <string name="action_my_activities">My Activities</string>
+	<string name="action_settings">Settings</string>  
+	<string name="action_sign_out">Sign Out</string>  
+	<!-- END -->
+	
 	<!-- Set TEXT VIEWs -->
 	<string name="viewDate">Stat Date: </string>
 	<string name="viewRepeatDates">Repeats: </string>
@@ -71,9 +73,6 @@
 	<string name="viewNumPeople">Number of People: </string>
 	<string name="viewOtherInfo">Other Information: </string>
     <!-- END -->
-    
-    <string name="categoryName">Test Category Name</string>
-    
     
 
 </resources>

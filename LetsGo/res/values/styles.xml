@@ -111,6 +111,19 @@
 		<style name="buttonCreate" parent="buttonLL" >
 		    <item name="android:text">@string/createBut</item>
 		</style>
+		<!-- My Activities Page -->
+		<style name="buttonDeleteAct" parent="buttonLL">
+		    <item name="android:text">@string/deleteActivityBut</item>
+		</style>
+		<style name="buttonEditAct" parent="buttonLL">
+		    <item name="android:text">@string/editActivityBut</item>
+		</style>
+		<style name="buttonMoreAct" parent="buttonLL">
+		    <item name="android:text">@string/moreActivityInfoBut</item>
+		</style>
+		<style name="buttonLeaveAct" parent="buttonLL">
+		    <item name="android:text">@string/leaveActivityBut</item>
+		</style>
 	<!-- END -->
 		
 	<!-- BUTTON Stacked/"normal" layout: Single button per line -->
@@ -118,7 +131,8 @@
 	    <item name="android:textColor">@color/black</item>
 	    <item name="android:layout_width">fill_parent</item>
 	    <item name="android:layout_height">wrap_content</item>
-	    <item name="android:layout_weight">1</item>
+	    <item name="android:layout_centerHorizontal">true</item>
+	    <item name="android:layout_centerVertical">true</item>
 	</style>
 		<!-- Specific BUTTONS -->
 		
