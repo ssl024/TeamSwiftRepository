@@ -21,6 +21,7 @@ public class CreateActivityPage extends Activity {
 					 inputOtherInfo;
 	private Button cancelCreateBut,
 				   createBut;
+	
 					 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +35,9 @@ public class CreateActivityPage extends Activity {
 		cancelCreateBut = (Button)findViewById(R.id.cancelCreateBut);
 		createBut = (Button)findViewById(R.id.createBut);
 		
+		//Get information from previous Activity Page
+		getIntent().getStringExtra("ActivityName");
+		getIntent().getStringExtra("ActivityLevel");
 		
 		//user click on cancel button, go back to homepage
 		cancelCreateBut.setOnClickListener(new View.OnClickListener() {

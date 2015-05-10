@@ -81,7 +81,7 @@ public class CreateCategoryPage extends Activity {
 				moveToCreateActivityPage.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 				
 				//Put all the data you will carry over to next activity here
-				moveToCreateActivityPage.putExtra("Name", clickedItem.getCategoryName());
+				moveToCreateActivityPage.putExtra("ActivityName", clickedItem.getCategoryName());
 				moveToCreateActivityPage.putExtra("ActivityLevel", clickedItem.getActivityLevel());
 				
 				//Then moves to Create Activity Page

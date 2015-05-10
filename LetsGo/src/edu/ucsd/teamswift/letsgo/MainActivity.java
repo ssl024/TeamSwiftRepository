@@ -128,6 +128,9 @@ public class MainActivity extends Activity {
 					
 			@Override
 			public void onClick(View v) {
+				Intent moveToHomePage = new Intent(MainActivity.this, HomePage.class);
+				moveToHomePage.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+				startActivity(moveToHomePage);
 				
 				/*TODO*/
 				//Before transition, check if Login Credential are good on parse carry token 
