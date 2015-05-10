@@ -16,9 +16,11 @@ import com.parse.ParseObject;
 import com.parse.ParseUser;
 import com.parse.LogInCallback;
 import com.parse.ParseException;
+
 // by noor
 import edu.ucsd.teamswift.letsgo.DialogPopUp;
 import android.app.Activity;	
+import android.app.DialogFragment;
 // Added by noor
 import android.content.Context;
 import android.content.Intent;
@@ -78,16 +80,19 @@ public class MainActivity extends Activity {
 				
 				/* TODO
 				 * Warning: Forgot password is being used as a temporary link to the
-				 * JoinCategoryPage.java
-				 * 
+				 * CreateActivityPage.java
 				 */
-				/*DialogFragment dialogPopup = new ForgotPasswordDialog();
+				//DialogFragment dialogPopup = new ForgotPasswordDialog();			
+				//dialogPopup.show(getFragmentManager(), "ForgotPasswordDialogTag");
 				
-				dialogPopup.show(getFragmentManager(), "ForgotPasswordDialogTag");*/
+				//Intent will allow user to transition to sign up page
+				Intent moveToCreatePage = new Intent(MainActivity.this, CreateActivityPage.class);
 				
-				Intent testMove = new Intent(MainActivity.this, JoinCategoryPage.class);
-				testMove.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-				startActivity(testMove);
+				//Makes it so the sign up page is a unique task
+				moveToCreatePage.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+					
+				//Then moves to Sign Up Page
+				startActivity(moveToCreatePage);
 			}
 		});
 			
@@ -123,6 +128,9 @@ public class MainActivity extends Activity {
 					
 			@Override
 			public void onClick(View v) {
+				Intent moveToHomePage = new Intent(MainActivity.this, HomePage.class);
+				moveToHomePage.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+				startActivity(moveToHomePage);
 				
 				/*TODO*/
 				//Before transition, check if Login Credential are good on parse carry token 
@@ -135,9 +143,9 @@ public class MainActivity extends Activity {
 					public void done(ParseUser user, ParseException e) {
 						if (user != null) {
 							// if the user exist and authenticated, send user to home screen
-							Intent intent = new Intent(MainActivity.this, HomePage.class);
-							startActivity(intent);
-							finish();
+							Intent moveToHomePage = new Intent(MainActivity.this, HomePage.class);
+							moveToHomePage.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+							startActivity(moveToHomePage);
 						} else {
 							//Break this "if" statement to give pop up for each individual error in field
 							if (emailString.equals("") || passwordStirng.equals("")) {

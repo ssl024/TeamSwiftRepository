@@ -18,13 +18,14 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 public class JoinCategoryPage extends Activity {
 	
 	ListView categoryListView;
+	Button backButton;
 
 	//The list of categories retrieved from Parse
 	List<Category> categoryList;
@@ -34,8 +35,18 @@ public class JoinCategoryPage extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_join_category_page);
 
-		//Find the ListView in the view
+		//Find the widgets in the view
 		categoryListView = (ListView)this.findViewById(R.id.categoryListView);
+		backButton = (Button)this.findViewById(R.id.backButton);
+		
+		//Back button takes user back to Home Page
+		backButton.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				finish();
+			}
+		});
 
 		/*
 		 * Calls the retrieveCategories function to retrieve the list from Parse.
@@ -64,9 +75,10 @@ public class JoinCategoryPage extends Activity {
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
 				
-				String categoryPicked = "You selected";
+				/* TODO
+				 * Put intent here and put extra data to carry over
+				 */
 
-				Toast.makeText(JoinCategoryPage.this, categoryPicked, Toast.LENGTH_SHORT).show();
 			}
 
 		});	

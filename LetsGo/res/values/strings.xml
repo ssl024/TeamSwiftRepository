@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Let\'s Go</string>
-        
+    
     <!-- User Info -->
     <string name="userEmail"></string>
     <string name="userPassword"></string>
@@ -37,12 +37,14 @@
     <string name="letsGoPlayBut">Let\'s Go Play!</string>
     <string name="myActivitiesBut">My Activities</string>
     <string name="createBut">Create!</string>
+    <string name="backBut">Back</string>
     <string name="cancelCreateBut">Cancel</string>
     <string name="logOutBut">Log out</string>
     <string name="deleteActivityBut">Delete</string>
     <string name="editActivityBut">Edit</string>
     <string name="moreActivityInfoBut">More Info</string>
     <string name="leaveActivityBut">Leave</string>
+
     <!-- END -->
 
 
@@ -58,8 +60,6 @@
     <string name="title_activity_my_activities_page">My Activities</string>
     <string name="title_activity_test">Test Activity</string>
     <string name="title_activity_my_profile_page">MyProfilePage</string>
-    
-
     <!-- END -->
 
 
@@ -71,8 +71,6 @@
     <string name="viewLocation">Location: </string>
     <string name="viewNumPeople">Number of People: </string>
     <string name="viewOtherInfo">Other Information: </string>
-    <!-- END -->
-
     <!-- END -->
     
     <!-- Settings options -->

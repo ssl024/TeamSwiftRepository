@@ -1,7 +1,5 @@
 package edu.ucsd.teamswift.letsgo;
 
-import java.util.ArrayList;
-
 import com.parse.ParseUser;	
 
 import android.app.Activity;
@@ -51,28 +49,26 @@ public class HomePage extends Activity {
 				//Eric link to Join and Create
 			// POP out Menu to chose between Create Game or Join Game
 				//final ArrayList mSelectedItems = new ArrayList();
-				String[] displayItems = {"Create", "Join"};
+				String[] displayItems = {"Create an Activity", "Join an Activity"};
 				AlertDialog.Builder builder = new AlertDialog.Builder(HomePage.this);
-				builder.setTitle("Create Or Join an Activity");
+				builder.setTitle("Let's Go");
 				builder.setItems(displayItems, new DialogInterface.OnClickListener()
 				{
-					public void onClick(DialogInterface dialog, int which) 
-					{
-						switch (which)
-						{
-						case 0:
-						{
-							//go to Create Activity
-							Intent moveToCreateActivities = new Intent(HomePage.this, CreateCategoryPage.class);
-							startActivity(moveToCreateActivities);
-							finish();
-						}
-						case 1:
-						{
-							//go to join activity 
+					public void onClick(DialogInterface dialog, int which){
+						switch (which){
+							case 0:{
+								//go to Create Activity
+								Intent moveToCreateActivities = new Intent(HomePage.this, CreateCategoryPage.class);
+								moveToCreateActivities.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+								startActivity(moveToCreateActivities);							
+								break;
+							}
+						case 1:{
+							//go to Join activity 
 							Intent moveToJoinActivities = new Intent(HomePage.this, JoinCategoryPage.class);
-							startActivity(moveToJoinActivities);
-							finish();
+							moveToJoinActivities.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+							startActivity(moveToJoinActivities);						
+							break;
 						}
 
 						}	
