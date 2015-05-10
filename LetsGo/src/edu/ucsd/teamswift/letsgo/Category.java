@@ -48,7 +48,12 @@ public class Category extends ParseObject {
 	public Bitmap getCategoryIcon(){
 		
 		// Locate the column named "ImageName" and set the string
-		ParseFile fileObject = getParseFile("ImageFile");
+		ParseFile fileObject = getParseFile("Icon");
+		
+		if(fileObject == null)
+		{
+			return null;
+		}
 		fileObject.getDataInBackground(new GetDataCallback(){
 
 			@Override

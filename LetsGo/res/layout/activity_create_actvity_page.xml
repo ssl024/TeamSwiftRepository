@@ -6,36 +6,66 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="edu.ucsd.teamswift.letsgo.CreateActivityPage" >
+    tools:context="edu.ucsd.teamswift.letsgo.CreateActvityPage" >
+
+    <TextView
+        android:id="@+id/viewUserName"
+        style="@style/createViewBasic"
+        android:text="@string/viewUserName" />
+    
+    <TextView
+        android:id="@+id/viewActivityName"
+        style="@style/createViewBasic"
+        android:layout_below="@+id/viewUserName"
+        android:text="@string/viewActivityName" />
 
     <TextView
         android:id="@+id/viewDate"
         style="@style/createViewBasic"
+        android:layout_below="@+id/viewActivityName"
         android:text="@string/viewDate" />
 
     <TextView
         android:id="@+id/viewStartTime"
         style="@style/createViewBasic"
-        android:layout_below="@+id/viewDate"
-        android:text="@string/viewStartTime" />
-
+        android:text="@string/viewStartTime"
+        android:layout_below="@+id/viewDate"/>
+    
+    <TextView
+        android:id="@+id/viewEndTime"
+        style="@style/createViewBasic"
+        android:text="@string/viewEndTime"
+        android:layout_below="@+id/viewStartTime"/>
+    
     <TextView
         android:id="@+id/viewLocation"
         style="@style/createViewBasic"
-        android:layout_below="@+id/viewStartTime"
-        android:text="@string/viewLocation" />
-
+        android:text="@string/viewLocation"
+        android:layout_below="@+id/viewEndTime"/>
+    
     <TextView
         android:id="@+id/viewNumPeople"
         style="@style/createViewBasic"
-        android:layout_below="@+id/viewLocation"
-        android:text="@string/viewNumPeople" />
-
+        android:text="@string/viewNumPeople"
+        android:layout_below="@+id/viewLocation"/>
+    
     <TextView
         android:id="@+id/viewOtherInfo"
         style="@style/createViewBasic"
         android:layout_below="@+id/viewNumPeople"
         android:text="@string/viewOtherInfo" />
+    
+    <TextView
+        android:id="@+id/textViewUserName"
+        style="@style/createViewBasic"
+        android:layout_alignBaseline="@+id/viewUserName"
+        android:layout_toRightOf="@+id/viewUserName" />
+    
+    <TextView
+        android:id="@+id/textViewActivityName"
+        style="@style/createViewBasic"
+        android:layout_alignBaseline="@+id/viewActivityName"
+        android:layout_toRightOf="@+id/viewActivityName" />
 
     <EditText
         android:id="@+id/inputStartDate"
@@ -53,20 +83,41 @@
         android:layout_alignBaseline="@+id/viewStartTime"
         android:layout_toRightOf="@+id/viewStartTime"
         android:inputType="time" />
-
+    
+    <EditText
+        android:id="@+id/inputEndTime"
+        style="@style/inputCreateViewBasic"
+        android:layout_alignBaseline="@+id/viewEndTime"
+        android:layout_toRightOf="@+id/viewEndTime"
+        android:inputType="time" />
+    
     <EditText
         android:id="@+id/inputLocation"
         style="@style/inputCreateViewBasic"
         android:layout_alignBaseline="@+id/viewLocation"
         android:layout_toRightOf="@+id/viewLocation"
         android:inputType="time" />
-
+    
     <EditText
         android:id="@+id/inputNumPeople"
         style="@style/inputCreateViewBasic"
         android:layout_alignBaseline="@+id/viewNumPeople"
         android:layout_toRightOf="@+id/viewNumPeople"
         android:inputType="number" />
+    
+    <EditText
+        android:id="@+id/inputOtherInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/twoButtonLL"
+        android:layout_alignLeft="@+id/viewOtherInfo"
+        android:layout_alignRight="@+id/twoButtonLL"
+        android:layout_below="@+id/viewOtherInfo"
+        android:scrollHorizontally="false"
+        android:gravity="top"
+        android:maxLength="200"
+        android:ems="10"
+        android:inputType="textMultiLine" />
 
     <!-- To put multiple buttons on one line unit -->
 
@@ -76,7 +127,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/viewOtherInfo"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="109dp"
+        android:layout_marginBottom="25dp"
         android:paddingBottom="15dp"
         android:paddingTop="15dp" >
 
@@ -88,16 +139,5 @@
             android:id="@+id/createBut"
             style="@style/buttonCreate" />
     </LinearLayout>
-
-    <EditText
-        android:id="@+id/inputOtherInfo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/twoButtonLL"
-        android:layout_alignLeft="@+id/viewOtherInfo"
-        android:layout_alignRight="@+id/twoButtonLL"
-        android:layout_below="@+id/viewOtherInfo"
-        android:ems="10"
-        android:inputType="textMultiLine" />
 
 </RelativeLayout>

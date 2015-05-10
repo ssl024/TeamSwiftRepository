@@ -35,23 +35,23 @@
 	    android:gravity="center"/>
 
 	<!-- 
-    	To put multiple buttons on one line unit 
+    	Combines a specified number of buttons into one "unit" 
+    	and place them on a single line.
     -->
 	<LinearLayout 
-	   	android:id="@+id/twoButtonLL"
+	   	android:id="@+id/linearOpeningButs"
       	android:layout_width="match_parent"
       	android:layout_height="wrap_content"
       	android:layout_below="@+id/forgotPasswordBut"
       	android:paddingTop= "15dp"
       	android:paddingBottom= "15dp">
        
-    <Button
-        android:id="@+id/signUpBut"
-        style="@style/buttonSignUp"/>
-     <Button
-        android:id="@+id/logInBut"
-        style="@style/buttonLogIn"/>
-    
-    </LinearLayout>
+    	<Button
+        	android:id="@+id/signUpBut"
+        	style="@style/buttonSignUp"/>
+     	<Button
+     	   android:id="@+id/logInBut"
+     	   style="@style/buttonLogIn"/>
+	</LinearLayout>
 
 </RelativeLayout>
