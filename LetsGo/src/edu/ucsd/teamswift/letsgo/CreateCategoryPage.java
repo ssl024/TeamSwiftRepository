@@ -75,7 +75,7 @@ public class CreateCategoryPage extends Activity {
 				Category clickedItem = (Category)parent.getItemAtPosition(position);
 				
 				//Intent will allow user to transition to Create Activity Page
-				Intent moveToCreateActivityPage = new Intent(CreateCategoryPage.this, CreateActvityPage.class);
+				Intent moveToCreateActivityPage = new Intent(CreateCategoryPage.this, CreateActivityPage.class);
 				
 				//Makes it so the sign up page is a unique task
 				moveToCreateActivityPage.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
