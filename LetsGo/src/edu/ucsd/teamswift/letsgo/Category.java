@@ -22,9 +22,14 @@ public class Category extends ParseObject {
 		return getString("Name");
 	}
 	
-	public void setCategoryName(String categoryName)
+	public boolean isJoinOnly()
 	{
-		put("Name", categoryName);
+		return getBoolean("JoinOnly");
+	}
+	
+	public int getActivityLevel()
+	{
+		return getInt("ActivityLevel");
 	}
 	
 	//get and set CategoryIcon

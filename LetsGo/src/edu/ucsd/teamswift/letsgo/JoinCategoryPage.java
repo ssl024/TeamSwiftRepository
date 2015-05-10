@@ -21,7 +21,6 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 public class JoinCategoryPage extends Activity {
 	
@@ -76,9 +75,10 @@ public class JoinCategoryPage extends Activity {
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
 				
-				String categoryPicked = "You selected";
+				/* TODO
+				 * Put intent here and put extra data to carry over
+				 */
 
-				Toast.makeText(JoinCategoryPage.this, categoryPicked, Toast.LENGTH_SHORT).show();
 			}
 
 		});	
