@@ -80,12 +80,19 @@ public class MainActivity extends Activity {
 				
 				/* TODO
 				 * Warning: Forgot password is being used as a temporary link to the
-				 * JoinCategoryPage.java
-				 * 
+				 * CreateActivityPage.java
 				 */
-				DialogFragment dialogPopup = new ForgotPasswordDialog();
+				//DialogFragment dialogPopup = new ForgotPasswordDialog();			
+				//dialogPopup.show(getFragmentManager(), "ForgotPasswordDialogTag");
 				
-				dialogPopup.show(getFragmentManager(), "ForgotPasswordDialogTag");
+				//Intent will allow user to transition to sign up page
+				Intent moveToCreatePage = new Intent(MainActivity.this, CreateActivityPage.class);
+				
+				//Makes it so the sign up page is a unique task
+				moveToCreatePage.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+					
+				//Then moves to Sign Up Page
+				startActivity(moveToCreatePage);
 			}
 		});
 			
