@@ -69,7 +69,9 @@
 		<!-- END -->
 	
 		<!-- Set TEXT VIEWs -->
-		<string name="viewDate">Stat Date: </string>
+		<string name="viewUserName">User Name:</string>
+		<string name="viewActivityName">Activity Name:</string>
+		<string name="viewDate">Start Date: </string>
 		<string name="viewRepeatDates">Repeats: </string>
 		<string name="viewStartTime">Start Time: </string>
 		<string name="viewEndTime">End Time: </string>

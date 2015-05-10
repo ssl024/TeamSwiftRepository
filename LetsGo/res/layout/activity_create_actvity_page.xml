@@ -9,8 +9,20 @@
     tools:context="edu.ucsd.teamswift.letsgo.CreateActivityPage" >
 
     <TextView
+        android:id="@+id/viewUserName"
+        style="@style/createViewBasic"
+        android:text="@string/viewUserName" />
+    
+    <TextView
+        android:id="@+id/viewActivityName"
+        style="@style/createViewBasic"
+        android:layout_below="@+id/viewUserName"
+        android:text="@string/viewActivityName" />
+
+    <TextView
         android:id="@+id/viewDate"
         style="@style/createViewBasic"
+        android:layout_below="@+id/viewActivityName"
         android:text="@string/viewDate" />
 
     <TextView
@@ -36,6 +48,18 @@
         style="@style/createViewBasic"
         android:layout_below="@+id/viewNumPeople"
         android:text="@string/viewOtherInfo" />
+    
+    <TextView
+        android:id="@+id/textViewUserName"
+        style="@style/createViewBasic"
+        android:layout_alignBaseline="@+id/viewUserName"
+        android:layout_toRightOf="@+id/viewUserName" />
+    
+    <TextView
+        android:id="@+id/textViewActivityName"
+        style="@style/createViewBasic"
+        android:layout_alignBaseline="@+id/viewActivityName"
+        android:layout_toRightOf="@+id/viewActivityName" />
 
     <EditText
         android:id="@+id/inputStartDate"
@@ -67,6 +91,17 @@
         android:layout_alignBaseline="@+id/viewNumPeople"
         android:layout_toRightOf="@+id/viewNumPeople"
         android:inputType="number" />
+    
+    <EditText
+        android:id="@+id/inputOtherInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/twoButtonLL"
+        android:layout_alignLeft="@+id/viewOtherInfo"
+        android:layout_alignRight="@+id/twoButtonLL"
+        android:layout_below="@+id/viewOtherInfo"
+        android:ems="10"
+        android:inputType="textMultiLine" />
 
     <!-- To put multiple buttons on one line unit -->
 
@@ -88,16 +123,5 @@
             android:id="@+id/createBut"
             style="@style/buttonCreate" />
     </LinearLayout>
-
-    <EditText
-        android:id="@+id/inputOtherInfo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/twoButtonLL"
-        android:layout_alignLeft="@+id/viewOtherInfo"
-        android:layout_alignRight="@+id/twoButtonLL"
-        android:layout_below="@+id/viewOtherInfo"
-        android:ems="10"
-        android:inputType="textMultiLine" />
 
 </RelativeLayout>

@@ -11,8 +11,6 @@
 
 package edu.ucsd.teamswift.letsgo;
 
-import com.parse.Parse;
-import com.parse.ParseObject;
 import com.parse.ParseUser;
 import com.parse.LogInCallback;
 import com.parse.ParseException;
@@ -20,7 +18,6 @@ import com.parse.ParseException;
 // by noor
 import edu.ucsd.teamswift.letsgo.DialogPopUp;
 import android.app.Activity;	
-import android.app.DialogFragment;
 // Added by noor
 import android.content.Context;
 import android.content.Intent;
@@ -50,15 +47,8 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		//Parse activation
-		// Enable Local Datastore.
-		//Parse.enableLocalDatastore(this);
-
-		//Register all ParseObject subclasses here:
-		ParseObject.registerSubclass(Category.class);
+		//Parse is now located in MainApplication.java
 		
-		Parse.initialize(this, "hB3eXHmQndkVq2f3Ir1I4G2WKW8va1p10ZUmi3iw", "uhv7L1VPCLM5xYdvEXHwb1tMJ1hCrYLkftaYUFeK");	
-
 		//Lets program look for and find the sign up button
 		forgotPasswordBut = (Button)this.findViewById(R.id.forgotPasswordBut);
 		signUpBut = (Button)this.findViewById(R.id.signUpBut);
@@ -128,9 +118,9 @@ public class MainActivity extends Activity {
 					
 			@Override
 			public void onClick(View v) {
-				Intent moveToHomePage = new Intent(MainActivity.this, HomePage.class);
+				/*Intent moveToHomePage = new Intent(MainActivity.this, HomePage.class);
 				moveToHomePage.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-				startActivity(moveToHomePage);
+				startActivity(moveToHomePage);*/
 				
 				/*TODO*/
 				//Before transition, check if Login Credential are good on parse carry token 
