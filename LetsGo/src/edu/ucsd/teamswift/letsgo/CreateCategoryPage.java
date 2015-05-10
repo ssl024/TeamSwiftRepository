@@ -7,6 +7,7 @@ import com.parse.ParseException;
 import com.parse.ParseQuery;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -17,7 +18,6 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 
 public class CreateCategoryPage extends Activity {
-
 	ListView categoryListView;
 	Button backButton;
 
@@ -35,6 +35,7 @@ public class CreateCategoryPage extends Activity {
 		
 		//Back button takes user back to Home Page
 		backButton.setOnClickListener(new View.OnClickListener() {
+
 			
 			@Override
 			public void onClick(View v) {

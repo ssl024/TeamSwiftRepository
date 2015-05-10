@@ -21,8 +21,7 @@ public class CreateActivityPage extends Activity {
 					 inputOtherInfo;
 	private Button cancelCreateBut,
 				   createBut;
-	
-					 	
+			 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

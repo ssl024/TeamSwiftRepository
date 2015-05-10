@@ -10,11 +10,17 @@ package edu.ucsd.teamswift.letsgo;
 
 import java.util.List;
 
+import com.parse.ParseImageView;
+
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class CategoryAdapter extends ArrayAdapter<Category> {
@@ -35,8 +41,7 @@ public class CategoryAdapter extends ArrayAdapter<Category> {
 		 * Creates the view if the view doesn't already exist, else
 		 * re-uses the old convertView.
 		 */
-		if(convertView == null)
-		{
+		if(convertView == null){
 			theInflater = LayoutInflater.from(getContext());
 			convertView = theInflater.inflate(R.layout.category_row_horizontal, parent, false);
 		}
@@ -44,22 +49,25 @@ public class CategoryAdapter extends ArrayAdapter<Category> {
 		//Get one of the items from the array and grab its name to fill the textview
 		Category currentCategory = (Category)getItem(position);
 		String categoryName = currentCategory.getCategoryName();
-	
-		/*TODO*/
-		//Drawable categoryIcon = getItem(position).getCategoryIcon();
-	
+		
 		//Find the TextView in the list item xml so we can change its text and image
 		TextView categoryNameTextView = (TextView)convertView.findViewById(R.id.categoryNameTextView);
 	
 		//Fill in the text
 		categoryNameTextView.setText(categoryName);
-		//Fill in the image
-		/*TODO*/
-		/*
-		 * Have to make it so this can dynamically grab the image required
-		 */
-		categoryNameTextView.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_launcher, 0, 0, 0);
 		
+		/*TODO Adding Icon Image to list*/
+		Bitmap categoryIcon = getItem(position).getCategoryIcon();
+
+    //If there is a picture or no problems
+		if (categoryIcon != null) {
+			Drawable d = new BitmapDrawable(getContext().getResources(), categoryIcon);
+			categoryNameTextView.setCompoundDrawablesWithIntrinsicBounds(d, null, null, null);
+		}
+		//use default picture
+		else{
+			categoryNameTextView.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_launcher, 0, 0, 0);
+		}
 		return convertView;
 	}
 
