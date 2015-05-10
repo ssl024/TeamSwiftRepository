@@ -74,7 +74,7 @@
 		<string name="viewStartTime">Start Time: </string>
 		<string name="viewEndTime">End Time: </string>
 		<string name="viewLocation">Location: </string>
-		<string name="viewNumPeople">Number of People: </string>
+		<string name="viewNumPeople">Number of Players: </string>
 		<string name="viewOtherInfo">Other Information: </string>
     <!-- END -->
 

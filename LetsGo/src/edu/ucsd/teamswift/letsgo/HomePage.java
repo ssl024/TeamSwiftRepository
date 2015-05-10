@@ -54,26 +54,20 @@ public class HomePage extends Activity {
 				builder.setTitle("Let's Go");
 				builder.setItems(displayItems, new DialogInterface.OnClickListener()
 				{
-					public void onClick(DialogInterface dialog, int which) 
-					{
-						switch (which)
-						{
-						case 0:
-						{
-							//go to Create Activity
-							Intent moveToCreateActivities = new Intent(HomePage.this, CreateCategoryPage.class);
-							moveToCreateActivities.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-							startActivity(moveToCreateActivities);
-							
-							break;
-						}
-						case 1:
-						{
+					public void onClick(DialogInterface dialog, int which){
+						switch (which){
+							case 0:{
+								//go to Create Activity
+								Intent moveToCreateActivities = new Intent(HomePage.this, CreateCategoryPage.class);
+								moveToCreateActivities.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+								startActivity(moveToCreateActivities);							
+								break;
+							}
+						case 1:{
 							//go to Join activity 
 							Intent moveToJoinActivities = new Intent(HomePage.this, JoinCategoryPage.class);
 							moveToJoinActivities.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-							startActivity(moveToJoinActivities);
-							
+							startActivity(moveToJoinActivities);						
 							break;
 						}
 
