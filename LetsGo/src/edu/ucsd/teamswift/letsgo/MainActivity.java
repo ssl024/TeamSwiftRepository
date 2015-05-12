@@ -16,10 +16,8 @@ import com.parse.ParseObject;
 import com.parse.ParseUser;
 import com.parse.LogInCallback;
 import com.parse.ParseException;
-// by noor
 import edu.ucsd.teamswift.letsgo.DialogPopUp;
 import android.app.Activity;	
-// Added by noor
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -27,18 +25,17 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+
 public class MainActivity extends Activity {
 
 	
 	Button forgotPasswordBut;
 	Button signUpBut;
 	Button logInBut;
-	
 	String emailString;
 	String passwordStirng;
 	EditText passwordEditText;
 	EditText emailEditText;
-	
 	
 	// PageContext is a variable to hold the page name to pass it to DialogPopUp()
 	Context pageContext = MainActivity.this;
@@ -47,9 +44,9 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-
+		
 		//Parse activation
-		// Enable Local Datastore.
+		//Enable Local Datastore.
 		//Parse.enableLocalDatastore(this);
 
 		//Register all ParseObject subclasses here:
@@ -73,21 +70,28 @@ public class MainActivity extends Activity {
 		 */
 		forgotPasswordBut.setOnClickListener(new View.OnClickListener() {
 			
+			
+			
+			
 			@Override
 			public void onClick(View v) {
+				
+				
 				
 				/* TODO
 				 * Warning: Forgot password is being used as a temporary link to the
 				 * JoinCategoryPage.java
 				 * 
 				 */
-				/*DialogFragment dialogPopup = new ForgotPasswordDialog();
 				
+				/*DialogFragment dialogPopup = new ForgotPasswordDialog();
 				dialogPopup.show(getFragmentManager(), "ForgotPasswordDialogTag");*/
 				
 				Intent testMove = new Intent(MainActivity.this, JoinCategoryPage.class);
 				testMove.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 				startActivity(testMove);
+			
+				
 			}
 		});
 			
@@ -151,7 +155,7 @@ public class MainActivity extends Activity {
 							else {
 								/* Pop up menu to tell user to complete form */
 								// Call DialogPopUp("title", "msg", "context")
-								DialogPopUp.DialogPop("There was a problem", "No Such user exist, please sign up", pageContext);
+								DialogPopUp.DialogPop("There was a problem", "No such user exist, please sign up", pageContext);
 							
 							}
 						}
@@ -162,8 +166,7 @@ public class MainActivity extends Activity {
 			}
 		});
 	}
-
-	
+		
 	//Removed Menu Icon on Opening Page
 /*	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

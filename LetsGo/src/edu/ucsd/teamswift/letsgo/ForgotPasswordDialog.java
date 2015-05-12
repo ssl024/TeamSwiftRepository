@@ -14,6 +14,7 @@ import com.parse.ParseException;
 import com.parse.ParseUser;
 import com.parse.RequestPasswordResetCallback;
 
+import android.app.Activity;
 import android.app.DialogFragment;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -21,18 +22,19 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.util.Log;
+import android.widget.Toast;
 
 public class ForgotPasswordDialog extends DialogFragment {
 
 	EditText emailUserEditText;
 	String emailString;
+	Activity MainAcitvity;
 	String ss;
 	
 	@Override
 	public Dialog onCreateDialog(Bundle savedInstanceState)
 	{
-		
+		MainAcitvity = getActivity();
 		AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
 	    /*
@@ -41,7 +43,7 @@ public class ForgotPasswordDialog extends DialogFragment {
 	     */
 		
 		final View dialogForgetPass = View.inflate(getActivity(), R.layout.forgot_password_dialog,null);
-	    builder.setTitle("Enter e-mail you dumbass").setView(dialogForgetPass).setPositiveButton(R.string.submitBut,
+	    builder.setTitle("Please enter your email address and we'll send you a recovery link.").setView(dialogForgetPass).setPositiveButton(R.string.submitBut,
 	    											new DialogInterface.OnClickListener() {
                @Override
                public void onClick(DialogInterface dialog, int id) {
@@ -55,20 +57,15 @@ public class ForgotPasswordDialog extends DialogFragment {
             		   public void done(ParseException e) {
             		     if (e == null) {
             		    	 // An email was successfully sent with reset instructions.
-            		    	 Log.e("ForgotPasswordDialog", "e is null");
-            		    	 
+            		    	 Toast.makeText(MainAcitvity.getApplicationContext(), 
+                                     "An email was successfully sent with reset instructions.", Toast.LENGTH_LONG).show();
             		     } else {
-            		    	 // MainActivity.ShowToast("Something went wrong. Look at the ParseException to see what's up.");
-            		    	 Log.e("ForgotPasswordDialog", "e is not null!");
+            		    	 // Something went wrong. Look at the ParseException to see what's up.
+            		    	 Toast.makeText(MainAcitvity.getApplicationContext(), 
+                                     "Something went wrong. Please try again", Toast.LENGTH_LONG).show();
             		     }
             		   }
             		 });
-
-            	   /* TODO
-            	    * 
-            	    * Put the action taken when user presses submit here.
-            	    */
-            	   Log.e("ForgotPasswordDialog", "You pressed the submit button!");
                }
            }).setNegativeButton(R.string.cancelBut, new DialogInterface.OnClickListener() {
                public void onClick(DialogInterface dialog, int id) {
