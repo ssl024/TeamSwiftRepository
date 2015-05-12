@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class CreateActvityPage extends Activity {
+public class CreateActivityPage extends Activity {
 
 	private EditText inputStartDate,
 					 inputRepeatDates,
@@ -43,7 +43,7 @@ public class CreateActvityPage extends Activity {
 			@Override
 			public void onClick (View v) {
 				
-				Intent moveToHomePage = new Intent(CreateActvityPage.this, HomePage.class);
+				Intent moveToHomePage = new Intent(CreateActivityPage.this, HomePage.class);
 				
 				//Clears all other activities including this one when returning to the Main Activity
 				moveToHomePage.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
