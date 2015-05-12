@@ -1,4 +1,4 @@
-/* Project: Lets Go
+/* Project: Lets Go	
  * Group: Team Swift
  * Description: Opening Page of "Lets Go" Android Application. Allows user to
  * 			    sign up or sign in to application
@@ -11,11 +11,11 @@
 
 package edu.ucsd.teamswift.letsgo;
 
-import com.parse.Parse;
 import com.parse.ParseObject;
 import com.parse.ParseUser;
 import com.parse.LogInCallback;
 import com.parse.ParseException;
+
 import edu.ucsd.teamswift.letsgo.DialogPopUp;
 import android.app.Activity;	
 import android.content.Context;
@@ -44,16 +44,12 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		
 		//Parse activation
 		//Enable Local Datastore.
 		//Parse.enableLocalDatastore(this);
-
 		//Register all ParseObject subclasses here:
 		ParseObject.registerSubclass(Category.class);
 		
-		Parse.initialize(this, "hB3eXHmQndkVq2f3Ir1I4G2WKW8va1p10ZUmi3iw", "uhv7L1VPCLM5xYdvEXHwb1tMJ1hCrYLkftaYUFeK");	
-
 		//Lets program look for and find the sign up button
 		forgotPasswordBut = (Button)this.findViewById(R.id.forgotPasswordBut);
 		signUpBut = (Button)this.findViewById(R.id.signUpBut);
@@ -70,28 +66,26 @@ public class MainActivity extends Activity {
 		 */
 		forgotPasswordBut.setOnClickListener(new View.OnClickListener() {
 			
-			
-			
-			
 			@Override
 			public void onClick(View v) {
 				
-				
-				
 				/* TODO
 				 * Warning: Forgot password is being used as a temporary link to the
-				 * JoinCategoryPage.java
-				 * 
+				 * CreateActivityPage.java
 				 */
+
+				//DialogFragment dialogPopup = new ForgotPasswordDialog();			
+				//dialogPopup.show(getFragmentManager(), "ForgotPasswordDialogTag");
 				
-				/*DialogFragment dialogPopup = new ForgotPasswordDialog();
-				dialogPopup.show(getFragmentManager(), "ForgotPasswordDialogTag");*/
+				//Intent will allow user to transition to sign up page
+				Intent moveToCreatePage = new Intent(MainActivity.this, CreateActivityPage.class);
 				
-				Intent testMove = new Intent(MainActivity.this, JoinCategoryPage.class);
-				testMove.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-				startActivity(testMove);
-			
-				
+				//Makes it so the sign up page is a unique task
+				moveToCreatePage.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+					
+				//Then moves to Sign Up Page
+				startActivity(moveToCreatePage);
+
 			}
 		});
 			
@@ -127,6 +121,9 @@ public class MainActivity extends Activity {
 					
 			@Override
 			public void onClick(View v) {
+				/*Intent moveToHomePage = new Intent(MainActivity.this, HomePage.class);
+				moveToHomePage.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+				startActivity(moveToHomePage);*/
 				
 				/*TODO*/
 				//Before transition, check if Login Credential are good on parse carry token 
@@ -139,9 +136,9 @@ public class MainActivity extends Activity {
 					public void done(ParseUser user, ParseException e) {
 						if (user != null) {
 							// if the user exist and authenticated, send user to home screen
-							Intent intent = new Intent(MainActivity.this, HomePage.class);
-							startActivity(intent);
-							finish();
+							Intent moveToHomePage = new Intent(MainActivity.this, HomePage.class);
+							moveToHomePage.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+							startActivity(moveToHomePage);
 						} else {
 							//Break this "if" statement to give pop up for each individual error in field
 							if (emailString.equals("") || passwordStirng.equals("")) {
